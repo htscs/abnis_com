@@ -1,0 +1,1191 @@
+/* @override http://localhost:3000/stylesheets/my_style.css?1309967128 */
+
+@charset   "utf-8";
+
+/* CSS Document
+  Filename: abnisDefault.css
+  Title : Primary CSS file for abnis.com
+  Author : Flavio Bordoni, flavio.bordoni@fbfwebdesign.com
+  URL : http://www.abnis.com/css/base.css
+  License: Copyright 2010, Flavio Bordoni, All Rights Reserved.
+       Feel free to read and learn from this, but please don't steal.
+*/
+
+
+
+/* ! RESET start */
+  
+
+  /* 
+  html5doctor.com Reset Stylesheet v1.6.1
+  Last Updated: 2010-09-17
+  Author: Richard Clark - http://richclarkdesign.com 
+  */
+  html, body, div, span, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  abbr, address, cite, code,
+  del, dfn, em, img, ins, kbd, q, samp,
+  small, strong, sub, sup, var,
+  b, i,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section, summary,
+  time, mark, audio, video {
+      margin:0;
+      padding:0;
+      border:0;
+      outline:0;
+      font-size:100%;
+      vertical-align:baseline;
+      background:transparent;
+  }
+  body {
+      line-height:1;
+  }
+  article,aside,details,figcaption,figure,
+  footer,header,hgroup,menu,nav,section { 
+      display:block;
+  }
+  nav ul {
+      list-style:none;
+  }
+  blockquote, q {
+      quotes:none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+      content:'';
+      content:none;
+  }
+  a {
+      margin:0;
+      padding:0;
+      font-size:100%;
+      vertical-align:baseline;
+      background:transparent;
+  }
+  /* change colours to suit your needs */
+  ins {
+      background-color:#ff9;
+      color:#000;
+      text-decoration:none;
+  }
+  /* change colours to suit your needs */
+  mark {
+      background-color:#ff9;
+      color:#000; 
+      font-style:italic;
+      font-weight:bold;
+  }
+  del {
+      text-decoration: line-through;
+  }
+  abbr[title], dfn[title] {
+      border-bottom:1px dotted;
+      cursor:help;
+  }
+  table {
+      border-collapse:collapse;
+      border-spacing:0;
+  }
+  /* change border colour to suit your needs */
+  hr {
+      display:block;
+      height:1px;
+      border:0;   
+      border-top:1px solid #cccccc;
+      margin:1em 0;
+      padding:0;
+  }
+  input, select {
+      vertical-align:middle;
+  }
+
+
+/* RESET end */
+
+
+
+/* LAYOUT start */
+  
+  form.view_mode
+  ,div.view_mode
+  {
+    width: 320px;
+    /*iphone width*/
+    height: 492px;
+    /*iphone height*/
+    margin: auto;
+    margin-top: 20px;
+    padding: 2px;
+    border: 1px solid #EEEEEE;
+    -moz-border-radius: 5px;
+    /* CSS3 spicing */
+    -webkit-border-radius: 5px;
+    /* CSS3 spicing */
+  }
+    
+  .main
+  {
+    width: auto;
+    /*  max-height: 120px;  */
+    height: 120px;
+    padding: 2px;
+  }
+  
+  .main > .header
+  {
+    width: auto;
+    /*  max-height: 50px;   */
+    height: 33px;
+    overflow: auto;
+    clear: both;
+  }
+  
+  .main > .section
+  {
+    width: auto;
+    /*  max-height: 50px;   */
+    height: 54px;
+    overflow: auto;
+    clear: both;
+  }
+  
+  .main>.footer
+  {
+    width: auto;
+    /*  max-height: 50px;   */
+    height: 33px;
+    overflow: auto;
+    clear: both;
+  }
+  
+    
+  .related
+  {
+    width: auto;
+    /*  max-height: 360px;  */
+    height: 360px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 2px;
+    border: 1px solid #EEEEEE;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+  }
+  
+  .related>.header
+  {
+    width: auto;
+    /*  max-height: 50px;   */
+    height: 33px;
+    overflow: auto;
+    clear: both;
+    padding: 2px;
+  }
+  
+  .related>.section
+  {
+    width: auto;
+    /*  max-height: 450px;  */
+    height: 284px;
+    overflow-y: scroll;
+    clear: both;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    /*  border-top: #555 solid 2px;   */
+    /*  border-bottom: #555 solid 2px;  */
+  }
+  
+  .related>.footer
+  {
+    bottom: 2px;
+    width: auto;
+    /*  max-height: 50px;   */
+    height: 33px;
+    overflow: auto;
+    clear: both;
+    padding: 2px;
+  }
+  
+
+/* LAYOUT end */
+
+
+
+/* ! TYPOGRAPHY start */
+
+  
+  h1
+  {
+    font-size: 16px;
+    min-height: 25px;
+  }
+  
+  div.view_mode h1
+  {
+    color: black;
+  }
+
+  div.edit_mode h1
+  {
+    color: white;
+  }
+
+  
+  h2
+  {
+    font-size: 14px;
+    min-height: 25px;
+  }
+
+  div.view_mode h2
+  {
+    color: black;
+  }
+
+  div.edit_mode h2
+  {
+    color: white;
+  }
+
+  
+  h3
+  {
+    font-size: 12px;
+    min-height: 25px;
+  }
+
+  div.view_mode h3
+  {
+    color: #eee;
+  }
+
+  div.edit_mode h3
+  {
+    color: white;
+  }
+
+  
+  h4
+  {
+    display: block;
+    font-size: 11px;
+    line-height: 1.1em;
+    min-height: 25px;
+  }
+
+  div.view_mode h4
+  {
+    color: #ccc;
+  }
+
+  div.edit_mode h4
+  {
+    color: white;
+  }
+
+  
+  h5
+  {
+    font-size: 11px;
+    min-height: 25px;
+  }
+
+  div.view_mode h5
+  {
+    color: #ccc;
+  }
+
+  div.edit_mode h5
+  {
+    color: white;
+  }
+
+  
+  h6
+  {
+    font-size: 11px;
+    min-height: 25px;
+  }
+
+  div.view_mode h6
+  {
+    color: #ccc;
+  }
+
+  div.edit_mode h6
+  {
+    color: white;
+  }
+  
+  
+  p
+  {
+    width: auto;
+    /*min-height: 25px;*/
+    /*border: 1px solid #444444;*/
+    /*-moz-border-radius: 4px; /* CSS3 spicing */
+    /*-webkit-border-radius: 4px; /* CSS3 spicing */
+    /*background-color: green;/**/
+    /*text-shadow: 1px 1px 1px #000000;*/
+  }
+  
+  div.view_mode p
+  {
+    color: #222222;
+    /*background-color: #ff2233;*/
+  }
+  
+  div.edit_mode p
+  {
+    color: white;
+  }
+  
+  
+  a:link
+  ,a:visited
+  {
+    min-width: 17px; /*viene allargato a 25px da 4px padding-left + 4px padding-right*/
+    min-height: 25px;
+    float: left;
+    display: block;
+    text-decoration: none;
+    line-height: 25px;/*permette di centrare il testo verticalmente*/
+    margin: 1px;
+    margin-top:0px;
+    /*padding-left: 6px;*/
+    /*  padding-right: 3px; */
+    /*  padding-top: 3px; */
+    /*  padding-bottom: 3px; */
+    border: 1px solid #dedede;
+    -moz-border-radius: 4px; /* CSS3 spicing */
+    -webkit-border-radius: 4px; /* CSS3 spicing */
+  }
+  a:hover
+  ,a:focus
+  {
+    border: 1px solid #dedede;
+    background-color: #dedede;
+  }
+  a:active
+  {
+    outline: none; /* get rid of those system borders being generated for A tags */
+  }
+  
+  div.view_mode a:link
+  , div.view_mode a:visited
+  {
+    color: black;
+  }
+  div.view_mode a:hover
+  , div.view_mode a:focus
+  {
+    color: black;
+  }
+  
+  div.edit_mode a:link
+  , div.edit_mode a:visited
+  {
+    color: white;
+  }
+  div.edit_mode a:hover
+  , div.edit_mode a:focus
+  {
+    color: white;
+  }
+  
+  
+  b
+  {
+    font-weight: bold;
+  }
+
+  input
+  {
+    font-family: georgia;
+    font-size: 16px;
+  }
+/* TYPOGRAPHY end */
+
+
+
+/* ICONS start */
+
+  .ico_home
+  , .ico_login
+  , .ico_person
+  , .ico_company
+  , .ico_product
+  , .ico_project
+  , .ico_new
+  , .ico_favorite
+  , .ico_delete
+  , .ico_edit
+  , .ico_option
+  , .ico_language
+  , .ico_language_it
+  , .ico_language_us
+  , .ico_select
+  , .ico_select_all
+  , .ico_tutorial
+  , .ico_users
+  , .ico_window_same
+  , .ico_window_new
+  {
+    text-indent: 24px; /*sposta il testo e permette di vedere l'icona*/
+    padding-left: 4px; /*sposta il testo ma allunga anche il block*/
+    padding-right: 4px;
+    background-repeat: no-repeat;
+    background-position: 2px;
+  }
+    
+  .ico_home
+  {
+    background-image: url("my_style_images/icons/home.png");
+  }
+
+  .ico_login
+  {
+    background-image: url("my_style_images/icons/login.png");
+  }
+  
+  .ico_person
+  {
+    background-image: url("my_style_images/icons/person.png");
+  }
+
+  .ico_company
+  {
+    background-image: url("my_style_images/icons/company.png");
+  }
+
+  .ico_product
+  {
+    background-image: url("my_style_images/icons/product.png");
+  }
+  
+  .ico_project
+  {
+    background-image: url("my_style_images/icons/project.png");
+  }
+    
+  .ico_new
+  {
+    background-image: url("my_style_images/icons/new.png");
+  }
+  
+  .ico_favorite
+  {
+    background-image: url("my_style_images/icons/favorite.png");
+  }
+  
+  .ico_delete
+  {
+    background-image: url("my_style_images/icons/delete.png");
+  }
+  
+  .ico_edit
+  {
+    background-image: url("my_style_images/icons/edit.png");
+  }
+  
+  .ico_option
+  {
+    background-image: url("my_style_images/icons/option.png");
+  }
+  
+  .ico_language
+  {
+    background-image: url("my_style_images/icons/language.png");
+  }
+  
+  .ico_language_it
+  {
+    background-image: url("my_style_images/icons/language_it.png");
+  }
+  
+  .ico_language_us
+  {
+    background-image: url("my_style_images/icons/language_us.png");
+  }
+
+ .ico_select
+  {
+    background-image: url("my_style_images/icons/select.png");
+  }
+
+  .ico_select_all
+  {
+    background-image: url("my_style_images/icons/select_all.png");
+  }
+  
+  .ico_tutorial
+  {
+    background-image: url("my_style_images/icons/tutorial.png");
+  }
+  
+  .ico_users
+  {
+    background-image: url("my_style_images/icons/users.png");
+  }
+
+  .ico_window_same
+  {
+    background-image: url("my_style_images/icons/window_same.png");
+  }
+
+  .ico_window_new
+  {
+    background-image: url("my_style_images/icons/window_new.png");
+  }
+
+/* ICONS end */
+
+
+
+/* NAVIGATION start  */
+
+
+  ul.nav
+  {
+    list-style-type: none;
+    /*important for the navigation bar*/
+    /*  background: red; */
+    /*for debug*/
+    /*  border-bottom: 2px solid yellow; */
+    /*for debug*/
+  }
+  
+  ul.nav li
+  {
+    padding-left: 16px;
+    float: left;
+    background: url("my_style_images/goTo.png") no-repeat left;
+  }
+  
+  ul.nav li:first-child
+  {
+    /*height: 25px;*/
+    padding-left: 0px;
+    /*padding-right: 2px;*/
+    float: left;
+    background: none;
+  }
+  
+  ul.nav li:first-child a
+  {
+    background-position: 2px;
+    text-indent: 25px; /*sposta il testo e permette di vedere l'icona*/
+    /*height: 27px;*/
+    /*padding-left: 26px;*/
+  }
+
+
+/* NAVIGATION end */
+
+
+
+/* PAGINATION start  */
+
+
+  div.pagination
+  {
+    list-style-type: none;
+  }
+  
+  div.pagination a
+  {
+	height: 25px;
+    padding-left: 0px;
+    float: left;
+    background-color: red;
+  }
+  
+  div.pagination span.previous_page.disabled
+  ,div.pagination span.next_page.disabled
+  {
+    height: 25px;
+    padding-left: 0px;
+    float: left;
+    background-color: greenyellow;
+    
+    min-width: 17px; /*viene allargato a 25px da 4px padding-left + 4px padding-right*/
+    min-height: 25px;
+    float: left;
+    display: block;
+    text-decoration: none;
+    line-height: 25px;/*permette di centrare il testo verticalmente*/
+    margin: 1px;
+    margin-top:0px;
+    /*padding-left: 6px;*/
+    /*  padding-right: 3px; */
+    /*  padding-top: 3px; */
+    /*  padding-bottom: 3px; */
+    border: 1px solid #dedede;
+    -moz-border-radius: 4px; /* CSS3 spicing */
+    -webkit-border-radius: 4px; /* CSS3 spicing */
+  }
+  
+    div.pagination em
+  {
+    height: 25px;
+    padding-left: 0px;
+    float: left;
+    background-color: yellow;
+    
+        min-width: 17px; /*viene allargato a 25px da 4px padding-left + 4px padding-right*/
+    min-height: 25px;
+    float: left;
+    display: block;
+    text-decoration: none;
+    line-height: 25px;/*permette di centrare il testo verticalmente*/
+    margin: 1px;
+    margin-top:0px;
+    /*padding-left: 6px;*/
+    /*  padding-right: 3px; */
+    /*  padding-top: 3px; */
+    /*  padding-bottom: 3px; */
+    border: 1px solid #dedede;
+    -moz-border-radius: 4px; /* CSS3 spicing */
+    -webkit-border-radius: 4px; /* CSS3 spicing */
+  }
+
+    div.pagination span.gap
+  {
+    height: 25px;
+    padding-left: 0px;
+    float: left;
+    background-color: yellow;
+    
+        min-width: 17px; /*viene allargato a 25px da 4px padding-left + 4px padding-right*/
+    min-height: 25px;
+    float: left;
+    display: block;
+    text-decoration: none;
+    line-height: 25px;/*permette di centrare il testo verticalmente*/
+    margin: 1px;
+    margin-top:0px;
+    /*padding-left: 6px;*/
+    /*  padding-right: 3px; */
+    /*  padding-top: 3px; */
+    /*  padding-bottom: 3px; */
+    border: 1px solid #dedede;
+    -moz-border-radius: 4px; /* CSS3 spicing */
+    -webkit-border-radius: 4px; /* CSS3 spicing */
+  }
+
+
+/* PAGINATION end */
+
+
+
+/* VIEW_LIST start  */
+
+
+ ul.view_list
+  {
+    list-style-type: none; /*important for the navigation bar*/
+    /*  background: red; /*for debug*/
+    /*  border-bottom: 2px solid yellow;/*for debug*/
+  }
+
+  ul.view_list>li>a
+  {
+      background: #f5f5f5; /**/
+      width: 290px;  
+      border: none;
+  } 
+
+ ul.view_list>li>a:hover
+ ,ul.view_list>li>a:focus
+  {
+      background: #dedede; /**/
+  } 
+  
+  ul.view_list>li.alternate>a
+  {
+      background: #f8f8f8; /#6FA4FE*/
+         border: none;
+  } 
+
+ ul.view_list>li.alternate>a:hover
+ ,ul.view_list>li.alternate>a:focus
+  {
+      background: #dedede; /**/
+         border: none;
+  } 
+  
+/* VIEW_LIST end */
+
+
+
+/* SEARCH INPUT start */
+
+
+  input.search_input
+  {
+    /*min-width: 22px;*/
+    width: 150px;
+    min-height: 23px;
+    float: left;
+    display: block;
+    margin-top: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    /*padding: 0px;*/
+    /*  text-shadow: 1px 1px 1px #000; */
+    border: 1px solid #dedede;
+    -moz-border-radius: 4px 0px 0px 4px; /* CSS3 spicing topLeft topRight BottomRight bottomLeft */
+    -webkit-border-radius: 4px 0px 0px 4px; /* CSS3 spicing topLeft topRight BottomRight bottomLeft */
+  }
+  
+  a.ico_search
+  ,input.ico_search
+  {
+    float: left;
+    width: 27px;
+    padding-left: 0px;
+    margin-left: 0px;
+    background: url("my_style_images/search.png") no-repeat 1px;
+    border-left: none;
+    -moz-border-radius: 0px 4px 4px 0px; /* CSS3 spicing topLeft topRight BottomRight bottomLeft */
+    -webkit-border-radius: 0px 4px 4px 0px; /* CSS3 spicing topLeft topRight BottomRight bottomLeft */
+  }
+  
+  a.ico_search:hover
+  , a.ico_search:focus
+  {
+    background-color: #888;
+    border: 1px solid #444;
+    border-left: none;
+  }
+
+
+/* SEARCH INPUT end */
+
+
+
+/* ! OVERLAY BASE EXPOSE' start */
+  
+  
+  /*  use a semi-transparent image for the overlay */
+  
+  .overlay
+  {
+    overflow-y: auto;
+    height: 460px;
+    /*  min-height: 200px; */
+    width: 300px;
+    padding: 5px;
+    /* some padding to layout nested elements nicely  */
+    display: none;
+    /* initially overlay is hidden */
+    background-color: #333333;
+    border: 1px solid #666666;
+    -moz-box-shadow: 0 0 10px 5px #000000;
+    /* CSS3 styling for latest browsers */
+    -webkit-box-shadow: 0 0 10px #000000;
+    /* CSS3 styling for latest browsers */
+    -moz-border-radius: 5px;
+    /* CSS3 spicing */
+    -webkit-border-radius: 5px;
+    /* CSS3 spicing */
+  }
+  
+  div.edit_mode
+  {
+    /*  overflow-y: auto; */ /* uses vertical scrollbar, if needed */
+    /*  height: 200px; */
+    background-color: #333333;
+  }
+  
+  .overlay .close /* default close button positioned on upper right corner */
+  {
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    right: 6px;
+    top: 2px;
+    background-image: url("./my_style_images/close.png");
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .overlay .close:hover
+  {
+    border: 1px solid #333333;
+    /*  background-image: url("./my_style_images/closeHover.png"); */
+    /*  background-color: transparent; */
+  }
+  
+
+/* OVERLAY BASE EXPOSE' end */
+
+
+
+/* ! TABS start */
+
+
+  ul.css-tabs /* root element for tabs  */
+  {
+    height: 35px;
+    margin: 0 !important;
+    padding: 0;
+    /*  border-bottom: 1px solid #666; */
+    background-color: inherit;
+  }
+  
+  ul.css-tabs li /* single tab */
+  {
+    height: 35px;
+    float: left;
+    padding: 0;
+    margin: 0;
+    background-color: inherit;
+    list-style-type: none;
+  }
+  
+  ul.css-tabs a /* link inside the tab. uses a background image */
+  {
+    /*height: 25px;*/   
+    min-width: 22px;
+    max-width: 72px;
+    padding: 5px 1px 1px 1px;
+    margin-right: 2px;
+    position: relative;
+    float: left;
+    top: 1px;
+    text-decoration: none;
+    display: block;
+    background-color: #FFFFFF;
+    color: #777777;
+    outline: 0;
+    border: 1px solid #666;
+    /*  border-bottom: 0px; */
+    -moz-border-radius: 0px 4px 0px 4px; /* CSS3 spicing */
+    -webkit-border-radius: 0px 4px 0px 4px; /* CSS3 spicing */
+  }
+  
+  ul.css-tabs a:hover
+  {
+    background-color: transparent;
+    color: #333333;
+  }
+  
+  ul.css-tabs a.current /* selected tab */
+  {
+    background-color: transparent;
+    /*  background-image: url("./my_style_images/arrow.png") no-repeat 10px; */
+    border: none;
+    color: #FFFFFF;
+    cursor: default;
+  }
+  
+  .css-panes > div /* tab pane */
+  {
+    /*overflow-y: auto;*/
+    /*height: 400px;*/
+    /*  min-height: 150px; */
+    /*padding: 2px;*/
+    display: none;
+    border: 1px solid #333333;
+    border-width: 0 1px 1px 1px;
+    background-color: inherit;
+  }
+
+  .css-panes > div div.header
+  {
+    width: auto;
+    /*  max-height: 50px;   */
+    height: 26px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    overflow: auto;
+    clear: both;
+  }
+  
+  .css-panes > div div.section
+  {
+    width: auto;
+    overflow-y: auto;
+    /*  max-height: 50px;   */
+    max-height: 350px;
+    overflow: auto;
+    clear: both;
+  }
+  
+  .css-panes > div div.footer
+  {
+    width: auto;
+    /*  max-height: 50px;   */
+    height: 40px;
+    overflow: auto;
+    clear: both;
+  }
+
+/*TABS end */
+
+
+
+/* IPHONE CHECKBOXES start */
+
+  
+  .css_sized_container .iPhoneCheckContainer
+  {
+    position:relative;
+    float: left;
+    width: 250px;
+  }
+    
+  .iPhoneCheckContainer
+  {
+    position: relative;
+    height: 27px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .iPhoneCheckContainer input
+  {
+    position: absolute;
+    top: 5px;
+    left: 30px;
+    opacity: 0;
+//    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  }
+  
+  .iPhoneCheckContainer label
+  {
+    white-space: nowrap;
+    font-size: 17px;
+    line-height: 17px;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    /*  text-transform: uppercase; */
+    cursor: pointer;
+    display: block;
+    height: 27px;
+    position: absolute;
+    width: auto;
+    top: 0;
+    padding-top: 5px;
+    overflow: hidden;
+  }
+  
+  .iPhoneCheckContainer, .iPhoneCheckContainer label
+  {
+//    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+  }
+  
+  .iPhoneCheckDisabled
+  {
+    opacity: 0.5;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  }
+  
+  label.iPhoneCheckLabelOn
+  {
+    color: white;
+    background: url('./my_style_images/iphone-style-checkboxes/on.png?1282083753') no-repeat;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
+    left: 0;
+    padding-top: 5px;
+  }
+  
+  label.iPhoneCheckLabelOn span
+  {
+    padding-left: 8px;
+  }
+  
+  label.iPhoneCheckLabelOff
+  {
+    color: #8b8b8b;
+    background: url('./my_style_images/iphone-style-checkboxes/off.png?1282083753') no-repeat right 0;
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.6);
+    text-align: right;
+    right: 0;
+  }
+  
+  label.iPhoneCheckLabelOff span
+  {
+    padding-right: 8px;
+  }
+  
+  .iPhoneCheckHandle
+  {
+    display: block;
+    height: 27px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    background: url('./my_style_images/iphone-style-checkboxes/slider_left.png?1282083753') no-repeat;
+    padding-left: 3px;
+  }
+  
+  .iPhoneCheckHandleRight
+  {
+    height: 100%;
+    width: 100%;
+    padding-right: 3px;
+    background: url('./my_style_images/iphone-style-checkboxes/slider_right.png?1282083753') no-repeat right 0;
+  }
+  
+  .iPhoneCheckHandleCenter
+  {
+    height: 100%;
+    width: 100%;
+    background: url('./my_style_images/iphone-style-checkboxes/slider_center.png?1282083753');
+  }
+
+
+/* IPHONE CHECKBOXES end */
+
+
+/* FORM start */
+
+.myform {
+  background:#333;  
+  /*padding:15px 20px;*/
+  padding-left:2px; 
+  color:#eee;
+  /*width:400px;*/
+  margin:0 auto;
+  position:relative;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;  
+} 
+
+.myform a {
+  clear: both;
+  width: 250px;
+}
+
+.myform label {
+  font-size:11px;   
+  margin-bottom:8px;
+  display:block;
+}
+
+.myform label input {
+  display:block;
+  width:94%;
+}
+
+/* typography */
+.myform h3  { color:#eee; margin-top:0px; }
+.myform p   { font-size:11px; }
+
+
+/* input field */
+.myform input
+, .myform button 
+{
+  border:1px solid #444;
+  background-color:#666;
+  padding:5px;
+  color:#ddd;
+  font-size:12px;
+  
+  /* CSS3 spicing */
+  text-shadow:1px 1px 1px #000;
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;  
+}
+
+.myform button 
+{
+  float:left;
+  margin-top:10px;  
+}
+
+.myform input:focus
+,.myform button:focus
+{ 
+  color:#fff; 
+  background-color:#777; 
+}
+
+.myform button:focus
+,.myform button:hover
+{ 
+  cursor: pointer;
+}
+
+.myform input:active
+,.myform button:active  
+{ 
+  background-color:#888; 
+}
+
+
+/* error message */
+.error {
+//  z-index:9999999999;
+  height:15px;
+  background-color:#FFFE36;
+  font-size:11px;
+  border:1px solid #E1E16D;
+  padding:4px 10px;
+  color:#000;
+  display:none; 
+  
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px; 
+  -moz-border-radius-bottomleft:0;
+  -moz-border-radius-topleft:0; 
+  -webkit-border-bottom-left-radius:0; 
+  -webkit-border-top-left-radius:0;
+  
+  -moz-box-shadow:0 0 6px #ddd;
+  -webkit-box-shadow:0 0 6px #ddd;  
+}
+
+
+.error {
+  margin:0 0 2px;
+  padding:2px 6px;  
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;    
+}
+
+.error p {
+  margin:0;   
+}
+
+.error em {
+  border:10px solid;
+  border-color:#FFFE36 transparent transparent;
+  bottom:-17px;
+  display:block;
+  height:0;
+  left:60px;
+  position:absolute;
+  width:0;      
+}
+
+
+/* field label */
+label {
+  display:block;
+  font-size:11px;
+  color:#ccc;
+}
+
+#terms label {
+  float:left;
+}
+
+#terms input {
+  margin:0 5px;
+}
+
+/* FORM end */

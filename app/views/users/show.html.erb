@@ -1,0 +1,30 @@
+<div id='mainform' class="view_mode"> <!-- FRONT_MODE start -->
+  <div class="main">
+
+    <div class="header">
+      <ul class="nav">
+        <li>
+		  <%= link_to "home", users_select_home_path, :class => "ico_home" %>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <p>Ciao <b><%= @user.name %></b> che facciamo?</p>
+      <%#= link_to user_path(@user.id), user_path(@user.id) %>
+      <p>Ultimo login 21/06/10 17:12</p>
+    </div>
+
+  </div>
+
+  <div class="related">    
+    <% if @selected_related == 'favorites' %>
+      <%= render "show_related_favorites" %>
+    <% elsif @selected_related == 'users' %>
+      <%= render "show_related_admin_users" %>
+    <% elsif @selected_related == 'people' %>
+      <%= render "show_related_people" %>    
+    <% end %>
+  </div>
+
+</div> <!-- FRONT_MODE end -->

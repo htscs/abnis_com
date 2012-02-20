@@ -1,0 +1,65 @@
+<div class ="rear_mode_overlay"> <!-- REAR_MODE start -->
+  <%= link_to "", user_path(1, :selected_related => 'people', :page => @page_id.to_i), :class => "close" %>
+  <div class="edit_mode"> <!-- EDIT start --> <!-- the external content is loaded inside this tag -->   
+    <ul class="css-tabs"> <!-- TABS start -->
+      <li><a href="#" class="ico_select"></a></li>
+      <li><a href="#" class="ico_option"></a></li>
+    </ul> <!-- TABS end -->
+    <div class="css-panes"> <!-- PANES start -->
+	
+	  <div><!-- TAB 1 start -->
+			
+        <div class="header">
+          <h3>selezione</h3>
+        </div>
+
+        <div class="section">
+          <nav>
+            <ul class="list">
+              <li>
+                <%= link_to "vai su nuova finestra", person_path(@person_id, :selected_related => 'favorites'), :class => 'ico_window_new', :target => "_blank" %>
+              </li>
+              <li>
+                <%= link_to "vai su stessa finestra", person_path(@person_id, :selected_related => 'favorites'), :class => 'ico_window_same' %>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer">
+          <a href="#" >1-2 di 2</a>
+        </div>
+
+      </div> <!-- TAB 1 end -->
+
+      <div> <!-- TAB 2 start -->
+	  	<form id='myform3' name='myform3' class='myform'>
+
+          <div class="header">
+            <h3>settaggi</h3>
+          </div>
+
+          <div class="section">
+            <label> Preferito Home </label>
+            <div class="checkbox_on_off">
+              <input id="preferito_home" name="1" type="checkbox" value="1" checked="checked"/>
+              <label for="preferito_home">Check-me</label>
+            </div>
+            <label> Storico </label>
+            <div class="checkbox_attuale_archivio">
+              <input id="storico" name="1" type="checkbox" value="1" />
+              <label for="storico">Check-me</label>
+            </div>
+          </div>
+
+          <div class="footer">
+            <button type="submit">Esegui</button>
+          </div>
+
+        </form>
+	  </div> <!-- TAB 2 end -->
+
+
+    </div> <!-- PANES end -->
+  </div> <!-- EDIT end -->
+</div> <!-- REAR_MODE end -->

@@ -1,0 +1,45 @@
+<div class="header">
+	<%= link_to "correlati", people_select_related_path( :person_id => @person.id,:selected_related => 'people' ), :class => "ico_person" %>  
+
+	<%= form_tag person_path(@person.id), :method => 'get' do %> <%# SEARCH %>
+		<%= hidden_field_tag :selected_related, 'people'  %>
+		<%= hidden_field_tag :page, 1  %>
+		<%# <input id="search_input" name="serach_input" class="search_input" type="text" value="search"></input> %>
+		<%= text_field_tag :trova, params[:trova], class: "search_input" %>
+		<%= submit_tag "", :name => nil, class: "ico_search" %> <%# vedi screencast Railcasts 037-simple-search-form %>
+	<% end %>
+
+	<%#= link_to "", person_path(@person.id, :selected_related => 'people',:page => 1, :trova => 'woo'), :class => "ico_new" %>  
+	<%= link_to "", new_person_path(:current_person_id => @person.id, :current_selected_related => 'people'), :class => "ico_new" %>  
+
+</div>
+<div class="section">
+  <nav>
+    <ul class="view_list">          
+      <% @people.each do |person| %>
+        <li> <%# mettere alternato un  <li class="alternate"> %>
+                    
+          <%= link_to "#{person.first_name}", select_go_to_person_path(@user_id, :go_to_person => "#{person.id}", :page => @page_id), 
+                      :class => '' %>
+                    
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+</div>
+<div class="footer">
+	<%#= will_paginate @people, :prev_label => '<<', :next_label => '>>', :inner_window => 0, :outer_window => 0 %>
+	<% if @people.previous_page %>
+		<%= link_to "<", params.merge(:page => @people.previous_page) %>
+	<% end%>
+	<a href="#"> Pagina <%= @people.current_page %> di <%= @people.total_pages %> </a>
+	<% if @people.next_page %>
+		<%= link_to ">", params.merge(:page => @people.next_page) %>
+	<% end%>
+
+  <div class="checkbox_attuale_archivio">
+    <input id="storico" name="1" type="checkbox" value="1" checked="checked"/>
+    <label for="storico">Check-me</label>
+  </div>
+
+</div>

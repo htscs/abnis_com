@@ -1,0 +1,57 @@
+<div id='mainform' class="view_mode"><!-- FRONT_MODE start -->
+	
+  <div class="main">
+
+    <div class="header">
+      <ul class="nav">
+        <li>
+          <%= link_to "entra", new_session_path, :class => "ico_login" %>  			  
+        </li>             
+      </ul>
+    </div>
+
+    <div class="section">
+      <p>Benvenuto in <b>Abnis</b></p>
+      <p> Clicca in alto su "entra" per andare sulla pagina di login.
+      <p>
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end %>
+      </p>
+      <p>Copyright 2011</p>
+      <p>Copyright 2011</p>
+      <p>Copyright 2011</p>
+      <p>Copyright 2011</p>
+      <p>Copyright 2011</p>
+    </div>
+
+  </div>
+ 
+ <div class="related">
+    <div class="header">
+      <a href="#" class="ico_language">lingua</a>
+      <input id="search_input" name="serach_input" class="search_input" type="text" value="search"></input>
+      <a href="#" id="searchButton" class="ico_search"></a>
+    </div>
+    <div class="section">
+    <nav>
+      <ul class="view_list">
+        <li>
+          <a href="#" class="ico_language_it">
+            <p>Italiano</p>
+          </a>  
+        </li>
+        <li class="alternate">
+          <a href="#" class="ico_language_us">
+            <p>English</p>
+          </a>  
+        </li>
+      </ul>
+    </nav>
+    </div>
+    <div class="footer">
+      <a href="#" >1-2 di 2</a>
+    </div>
+  </div>
+
+</div> <!-- FRONT_MODE end -->

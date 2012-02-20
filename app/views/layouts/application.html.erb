@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title_help %></title>
+  <%= stylesheet_link_tag 'my_style.css', :media => 'screen' %>
+  <%# stylesheet_link_tag    "application" %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<%# flash.each do |name, msg| %>
+	  <%#= content_tag :div, msg, :id => "flash_#{name}" %>
+	<%# end %>
+
+<%= yield %>
+
+	<%= render "layouts/debug"  if Rails.env.development? %>
+  
+	<%= javascript_include_tag "application" %>
+
+	<!-- jQuery at the end to avoid the usage of the $(document).ready() -->
+	<%= javascript_include_tag "jquery-1.4.2.min.js" %>
+  	<%= javascript_include_tag "overlay.min.js" %>
+  	<%= javascript_include_tag "toolbox.expose.min.js" %>
+  	<%= javascript_include_tag "tabs.min.js" %>
+  	<%= javascript_include_tag "validator.min.js" %>
+  	<%= javascript_include_tag "phone-style-checkboxes.js" %>
+  	<%= javascript_include_tag "abnis.js" %> <!-- my jquery code !!!ALWAYS THE LAST!!! -->
+
+</body>
+</html>

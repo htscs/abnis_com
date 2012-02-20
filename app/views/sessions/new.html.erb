@@ -1,0 +1,37 @@
+<div id='mainform' class ="rear_mode_overlay"> <!-- REAR_MODE start -->
+  <%= link_to "", root_path, :class => "close" %>
+  <div class="edit_mode"> <!-- EDIT start - the external content is loaded inside this tag -->
+    <ul class="css-tabs"> <!-- TABS start -->
+      <li><a href="#" class="ico_login"></a></li>
+    </ul> <!-- TABS end -->
+    <div class="css-panes"> <!-- PANES start -->
+      <div> <!-- TAB 1 start -->
+        <%= form_for(:session, :url => sessions_path, :method => "post", :html => {:id => 'myform3', :name => 'myform3' , :class => 'myform'}) do |f| %>
+
+          <div class="header">
+            <h3>immettere Utente e Password</h3>
+          </div>
+
+          <div class="section">		          
+            <label for="email"> Utente: <%= f.text_field :email %> </label>
+            <label for="password"> Password: <%= f.password_field :password %> </label>
+          </div>
+
+          <p>
+           <% flash.each do |name, msg| %>
+             <%= content_tag :div, msg, :id => "flash_#{name}" %>
+           <% end %>
+          </p>
+           
+          <div class="footer">
+            <%= f.submit "Sign in"%> 
+          </div>
+           
+           <%# Nuovo utente dovrebbe essere solo per ADMIN --> %> 
+		   <label for="niente"> Nuovo utente? <%= link_to "Sign up now!", signup_path %> </label>
+		
+        <% end %>
+      </div> <!-- TAB 1 end -->
+    </div> <!-- PANES end -->
+  </div> <!-- EDIT end -->
+</div><!-- REAR_MODE end -->

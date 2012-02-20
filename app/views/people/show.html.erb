@@ -1,0 +1,28 @@
+<div id='mainform' class="view_mode"> <!-- FRONT_MODE start -->
+  <div class="main">
+
+    <div class="header">
+      <ul class="nav">
+        <li>
+		  <%= link_to "home", user_path(@current_user_id, :selected_related => 'people'), :class => "ico_home" %>	
+        </li>
+        <li>
+		  <%= link_to "Persone", users_select_home_path, :class => "ico_person" %>
+        </li>
+      </ul>
+    </div>
+    <div class="section">
+      <%= link_to "#{@person.title} #{@person.first_name} #{@person.last_name} - #{@person.homonymy}", edit_person_path(@person.id), :class => "" %>
+    </div>
+
+  </div>
+
+  <div class="related">    
+    <% if @selected_related == 'favorites' %>
+      <%= render "show_related_favorites" %>
+    <% elsif @selected_related == 'people' %>
+      <%= render "show_related_people" %>    
+    <% end %>
+  </div>
+
+</div> <!-- FRONT_MODE end -->

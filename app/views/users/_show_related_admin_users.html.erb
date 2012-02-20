@@ -1,0 +1,31 @@
+  <div class="header">
+  	<%= link_to "", users_select_related_path( :selected_related => 'people' ), :class => "ico_users" %>  
+
+    <input id="search_input" name="serach_input" class="search_input" type="text" value="search"></input>
+    <a href="#" id="searchButton" class="ico_search">
+    <a href="#" class="ico_new" loadOverlay="false" rel="#edit_related"></a>
+  </div>
+  <div class="section">
+    <nav>
+      <ul class="view_list">          
+        <% @users.each do |user| %>
+          <li> <%# mettere alternato un  <li class="alternate"> %>
+            <a href="#" class="" loadOverlay="false" rel="#edit_related">
+              <p><%= user.name %></p>
+            </a>
+          </li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+  <div class="footer">
+    <%= will_paginate @users, :prev_label => '<<', :next_label => '>>', :inner_window => 0, :outer_window => 0 %>
+
+    <div class="checkbox_attuale_archivio">
+      <input id="storico" name="1" type="checkbox" value="1" checked="checked"/>
+      <label for="storico">Check-me</label>
+    </div>
+
+    <a href="#" ><%= page_entries_info @users %></a>
+
+  </div>

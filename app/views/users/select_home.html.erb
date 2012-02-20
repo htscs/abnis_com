@@ -1,0 +1,67 @@
+<div class="rear_mode_overlay"> <!-- REAR_MODE start -->
+  <%= link_to "", user_path(@user_id, :selected_related => session[:selected_related]), :class => 'close' %>          
+
+  <div class="edit_mode"> <!-- EDIT_MODE start --> <!-- the external content is loaded inside this tag -->
+
+    <ul class="css-tabs"> <!-- TABS start -->
+      <li><a href="#" class="ico_logout"></a></li>
+      <li><a href="#" class="ico_option"></a></li>
+    </ul> <!-- TABS end -->
+
+    <div class="css-panes"> <!-- PANES start -->
+
+      <div class="myform"> <!-- TAB 1 start -->
+        <div class="header">
+          <h1>Logout</h1>
+        </div>
+
+        <div class="section">
+        <nav>
+          <ul class="list">
+            <li>
+              <%= link_to "logout", logout_path, :class => 'ico_logout' %>
+            </li>
+           </ul>
+        </nav>
+        </div>
+
+        <div class="footer">
+          <p>Arrivederci.</p>
+        </div>
+      </div> <!-- TAB 1 end -->
+      
+      <div class="myform"> <!-- TAB 2 start -->
+        <div class="header">
+          <h1>Settaggi</h1>
+        </div>
+
+        <div class="section">
+        <nav>
+          <ul class="list">
+            <li>
+              <a href="#" class="ico_project">settaggi dei colori</a>
+            </li>
+            <li>
+              <a href="#" class="ico_project">settaggj della lingua</a>
+            </li>
+            <li>
+              <a href="#" class="ico_project">help in linea</a>
+            </li>
+            <li>
+              <a href="#" class="ico_project">se sei amministratore puoi creare/eliminare utenti</a>
+            </li>
+            <li>
+              <a href="#" class="ico_project">varie ed eventuali</a>
+            </li>
+          </ul>
+        </nav>
+        </div>
+
+        <div class="footer">
+          <a href="#" >1-9 di 120</a>
+        </div>
+      </div> <!-- TAB 2 end -->
+ 
+    </div> <!-- PANES end -->
+  </div> <!-- EDIT_MODE end -->
+</div> <!-- REAR_MODE end -->

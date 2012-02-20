@@ -1,0 +1,22 @@
+<div class="debug">
+<code>
+	<p><b>session array all values (only current_user_id)</b></p>
+	<table>	
+		<tr><td>session["user_id"]           </td><td>: <%= session[:user_id] %> </td></tr>
+	</table>
+	<br></br>
+	<p><b>params array all values</b></p>
+	<table>	
+		<tr><td>params[:controller]        </td><td>: <%= params[:controller] %> </td></tr>	
+		<tr><td>params[:action]            </td><td>: <%= params[:action] %> </td></tr>	
+		<tr><td>params[:id]                </td><td>: <%= params[:id] %> </td></tr>	
+		<tr><td>params[:selected_related]  </td><td>: <%= params[:selected_related] %> </td></tr>
+	</table>
+	<br></br>
+	<p><b>debug(session) -- shows the current session array values</b></p>
+	<p><%= debug(session) %></p>
+	<br></br>
+	<p><b>debug(params) -- shows the current params array values</b></p>
+	<p><%= debug(params) %></p>
+</code>
+</div>

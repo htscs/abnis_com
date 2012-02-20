@@ -1,0 +1,20 @@
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= @user.errors.full_messages.length %>
+      <% if @user.errors.full_messages.length != 1 %>
+        errori hanno 
+      <% else %>
+        errore ha
+      <% end %>
+      impedito all'utente di essere salvato:
+    </h2>
+    <p>Ci sono problemi con i seguenti campi:</p>
+    <ul>
+      <% @user.errors.full_messages.each do |message|%>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+  
+<% end %>

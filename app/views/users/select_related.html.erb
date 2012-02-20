@@ -1,0 +1,110 @@
+<div class="rear_mode_overlay"> <!-- REAR_MODE start -->
+  <%= link_to "", user_path(@user_id, :selected_related => @selected_related), :class => 'close' %>
+  <div class="edit_mode"> <!-- EDIT start --> <!-- the external content is loaded inside this tag -->
+    <ul class="css-tabs"> <!-- TABS start -->
+      <li><a href="#" class="ico_select"></a></li>
+      <li><a href="#" class="ico_select_all"></a></li>
+    </ul> <!-- TABS end -->
+    <div class="css-panes"> <!-- PANES start -->
+      <div class="myform"> <!-- TAB 1 start -->
+	
+        <div class="header">
+          <h3>selezione scelta</h3>
+        </div>
+
+        <div class="section">
+        <nav>
+          <ul class="list">
+            <li>
+              <%= link_to "preferiti", user_path(@user_id, :selected_related => 'favorites'), :class => 'ico_favorite' %>
+            </li>
+            <li>
+              <%= link_to "persone", user_path(@user_id, :selected_related => 'people'), :class => 'ico_person' %>
+            </li>
+            <li>
+              <%= link_to "aziende", "#", :class => 'ico_company' %>
+            </li>
+            <li>
+			  <%= link_to "prodotti", "#", :class => 'ico_product' %>
+            </li>
+            <li>
+			  <%= link_to "progetti", "#", :class => 'ico_project' %>	
+            </li>
+            <li>
+			  <%= link_to "fatture", "#", :class => 'ico_project' %>
+            </li>
+            <li>
+			  <%= link_to "offerte", "#", :class => 'ico_project' %>
+            </li>
+            <li>
+			  <%= link_to "ddt", "#", :class => 'ico_project' %>
+            </li>
+            <li>
+			  <%= link_to "rit", "#", :class => 'ico_project' %>
+            </li>
+            <li>
+			  <%= link_to "pagamenti", "#", :class => 'ico_project' %>
+            </li>
+          </ul>
+        </nav>
+        </div>
+
+        <div class="footer">
+          <a href="#" >1-9 di 9</a>
+        </div>
+
+      </div> <!-- TAB 1 end -->      
+      <div class="myform"> <!-- TAB 2 start -->
+	
+        <div class="header">
+          <h3>tutti</h3>
+        </div>
+
+        <div class="section">
+          <nav>
+            <ul class="list">
+	            <li>
+	              <%= link_to "preferiti", user_path(@user_id, :selected_related => 'favorites'), :class => 'ico_favorite' %>
+	            </li>
+	            <li>
+	              <%= link_to "persone", user_path(@user_id, :selected_related => 'people'), :class => 'ico_person' %>
+	            </li>
+	            <li>
+				  <%= link_to "utenti", user_path(@user_id, :selected_related => 'users'), :class => 'ico_users' %>	            
+	            </li>
+	            <li>
+	              <%= link_to "aziende", "#", :class => 'ico_company' %>
+	            </li>
+	            <li>
+				  <%= link_to "prodotti", "#", :class => 'ico_product' %>
+	            </li>
+	            <li>
+				  <%= link_to "progetti", "#", :class => 'ico_project' %>	
+	            </li>
+	            <li>
+				  <%= link_to "fatture", "#", :class => 'ico_project' %>
+	            </li>
+	            <li>
+				  <%= link_to "offerte", "#", :class => 'ico_project' %>
+	            </li>
+	            <li>
+				  <%= link_to "ddt", "#", :class => 'ico_project' %>
+	            </li>
+	            <li>
+				  <%= link_to "rit", "#", :class => 'ico_project' %>
+	            </li>
+	            <li>
+				  <%= link_to "pagamenti", "#", :class => 'ico_project' %>
+	            </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer">
+          <a href="#" >1-9 di 120</a>
+        </div>
+
+      </div> <!-- TAB 2 end --> 
+    </div> <!-- PANES end -->
+  </div> <!-- EDIT end -->
+</div> <!-- REAR_MODE end -->

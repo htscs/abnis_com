@@ -1,0 +1,40 @@
+<div class="rear_mode_overlay"> <!-- EDIT - REAR_MODE start -->
+  <%#= link_to "", person_path(@person_id, :selected_related => session[:selected_related]), :class => 'close' %>
+  <%= link_to "", person_path(@previous_person_id, :selected_related => @previous_selected_related), :class => 'close' %>
+  <div class="edit_mode"> <!-- EDIT start --> <!-- the external content is loaded inside this tag --> 
+    <ul class="css-tabs"> <!-- TABS start -->
+      <li><a href="#" class="ico_new"></a></li>
+    </ul> <!-- TABS end -->
+    <div class="css-panes"> <!-- PANES start -->
+
+      <div><!-- TAB 1 start -->
+
+
+      <%= form_for(@person, :html => {:id => 'myform3', :name => 'myform3' , :class => 'myform'}) do |f| %>
+        
+        <div class="header">
+          <h1>Nuova Persona</h1>
+        </div>
+
+        <div class="section">
+          <label for="title"> Titolo: <%= f.text_field :title,:value => "Sig." %> </label>          
+          <label for="last_name"> Cognome: <%= f.text_field :last_name, :value => "cognome" %> </label>
+          <label for="first_name"> Nome: <%= f.text_field :first_name, :value => "nome" %> </label>
+          <label for="homonymy"> Omonimia: <%= f.text_field :homonymy, :value => "" %> </label>          
+        </div>
+
+        <div class="footer">
+			<%= f.submit "Esegui"%>
+        </div>
+
+      <% end %>
+
+
+      </div><!-- TAB 1 end -->
+
+
+    </div> <!-- PANES end -->
+  </div> <!-- EDIT end -->
+</div> <!-- REAR_MODE end -->
+
+
