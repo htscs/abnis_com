@@ -2,8 +2,9 @@ class PeopleController < ApplicationController
 
   def new
     @person = Person.new
-    @previous_person_id = params[:current_person_id] #se lanciato da person_show 
+    @previous_person_id = params[:current_person_id] #se non sono su person->person allora è nil
     @previous_selected_related = params[:current_selected_related]
+    @user_id = session[:user_id]
     @title = "Persona"
   end
 

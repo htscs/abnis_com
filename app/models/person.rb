@@ -14,6 +14,6 @@ class Person < ActiveRecord::Base
 
   validates :homonymy,      :length     => {:maximum => 255}
 
-  scope :search, lambda {|query| where(["first_name LIKE ?", "%#{query}%"])}
+  scope :search, lambda {|query| where(["first_name LIKE ? OR last_name LIKE ?", "%#{query}%","%#{query}%"])}
 
 end

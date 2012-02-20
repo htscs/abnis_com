@@ -45,7 +45,13 @@ class UsersController < ApplicationController
       # @people = Person.paginate :page => params[:page], :order => 'created_at DESC', :per_page => 25
       @people = Person.search(params[:trova]).page(params[:page]).per_page(25).order('created_at DESC')
     end  
-    #    
+    #
+    if params[:trova] == nil || params[:trova] == ""
+      @ico_new_status = 'disabled'
+    elsif
+      @ico_new_status = 'enabled'  
+    end
+    #        
     @selected_go_to = params[:selected_go_to]
     if @selected_go_to == nil
       @selected_go_to = 1

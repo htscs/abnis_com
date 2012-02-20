@@ -1,6 +1,10 @@
 <div class="rear_mode_overlay"> <!-- EDIT - REAR_MODE start -->
   <%#= link_to "", person_path(@person_id, :selected_related => session[:selected_related]), :class => 'close' %>
-  <%= link_to "", person_path(@previous_person_id, :selected_related => @previous_selected_related), :class => 'close' %>
+  <% if @previous_person_id == nil %>
+    <%= link_to "", person_path(@user_id, :selected_related => @previous_selected_related), :class => 'close' %>
+  <% else %>
+    <%= link_to "", person_path(@previous_person_id, :selected_related => @previous_selected_related), :class => 'close' %>
+  <% end %>
   <div class="edit_mode"> <!-- EDIT start --> <!-- the external content is loaded inside this tag --> 
     <ul class="css-tabs"> <!-- TABS start -->
       <li><a href="#" class="ico_new"></a></li>
