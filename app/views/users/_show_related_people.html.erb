@@ -32,9 +32,9 @@
       <% @people.each do |person| %>
         <li> <%# mettere alternato un  <li class="alternate"> %>
                     
-          <%= link_to "#{person.title} #{person.last_name} #{person.first_name}", select_go_to_person_path(@user.id, :go_to_person => "#{person.id}", :page => @page_id), 
-                      :class => '' %>
-                    
+          <%= link_to "#{person.title} #{person.last_name} #{person.first_name}", person_path(person.id, :selected_related => 'favorites'), :class => 'sx' %>
+          <%= link_to "...", select_go_to_person_path(@user.id, :go_to_person => "#{person.id}", :page => @page_id), 
+                      :class => 'dx' %>
         </li>
       <% end %>
     </ul>

@@ -20,7 +20,7 @@
         <li> <%# mettere alternato un  <li class="alternate"> %>
                     
           <%= link_to "#{person.first_name}", select_go_to_person_path(@user_id, :go_to_person => "#{person.id}", :page => @page_id), 
-                      :class => '' %>
+                      :class => 'sx' %>
                     
         </li>
       <% end %>

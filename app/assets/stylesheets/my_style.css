@@ -591,11 +591,20 @@ UL.view_list
 background: red; /*for debug
 border-bottom: 2px solid yellow;/*for debug*/
 }
-UL.view_list > LI > A
+UL.view_list > LI > A.sx
 {
+	float: left;
 	background: #F5F5F5;
 /**/
-	width: 290px;
+	width: 270px;
+	border: none;
+}
+UL.view_list > LI > A.dx
+{
+	float: left;
+	background: #F5F5F5;
+/**/
+	width: 10px;
 	border: none;
 }
 UL.view_list > LI > A:hover, UL.view_list > LI > A:focus
