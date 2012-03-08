@@ -13,6 +13,7 @@
     </div>
     <div class="section">
       <%= link_to "#{@person.title} #{@person.first_name} #{@person.last_name} - #{@person.homonymy}", edit_person_path(@person.id), :class => "" %>
+      <%= image_tag @person.image_url.to_s %>      
     </div>
 
   </div>
