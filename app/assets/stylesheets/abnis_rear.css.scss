@@ -8,246 +8,222 @@ License: Copyright 2010, Flavio Bordoni, All Rights Reserved.
 Feel free to read and learn from this, but please don't steal.
 */
 
-/*LAYOUT start*/
-FORM.front_mode, DIV.front_mode
+FORM.rear_mode_overlay, DIV.rear_mode_overlay
 {
+	/*LAYOUT start*/
+	/*use a semi-transparent image for the overlay*/
+
 	width: 320px; /*iphone width 320px*/
-	height: 512px; /*iphone height 492px*/
+	height: 492px; /*iphone height 492px*/
 	margin: auto;
 	margin-top: 20px;
-	padding: 2px;
-	border: 1px solid #EEEEEE;
-	-moz-border-radius: 5px; /*CSS3 spicing*/
-	-webkit-border-radius: 5px; /*CSS3 spicing*/
-}
-
-.main
-{
-	width: auto; /*max-height: 120px;*/
-	height: 140px;
-	padding: 2px;
-}
-
-.main > .header
-{
-	width: auto;/*max-height: 50px;*/
-	height: 33px;
-	overflow: auto;
-	clear: both;
-}
-
-.main > .section
-{
-	width: auto; /*max-height: 50px;*/
-	height: 108px;
-	overflow: auto;
-	clear: both;
-}
-
-/*ELIMINATO - NON ESISTE FOOTER SULLA MAIN
-.main > .footer
-{
-width: auto;
-height: 33px;
-overflow: auto;
-clear: both;
-}
-*/
-
-.related
-{
-	width: auto; /*max-height: 360px;*/
-	height: 360px;
-	margin-top: 2px;
-	margin-bottom: 2px;
-	padding: 2px;
-	border: 1px solid #EEEEEE;
-	-moz-border-radius: 5px;
+	padding: 5px;
+	background-color: #333333;
+	border: 1px solid #666666;
+	-moz-box-shadow: 0 0 10px 5px #000000;
+	-webkit-box-shadow: 0 0 10px #000000;
+	-moz-border-radius: 5px; 
 	-webkit-border-radius: 5px;
+
+	.close
+	{
+		height: 36px;
+		width: 36px;
+		position: relative;
+		float: right;
+		display: block;
+		left: 5px;
+		top: -5px;
+		background-image: url("my_style_images/close.png");
+		background-color: transparent;
+		cursor: pointer;
+		border: none;
+	}
+	.close:hover
+	{
+		left: 4px;
+		top: -4px;
+		/*border: 1px solid #333333;
+		background-image: url("./my_style_images/closeHover.png");
+		background-color: transparent;*/
+	}
+
+	.edit_mode{
+/*		position: relative;
+*/	
+		.main
+		{
+			width: auto; /*max-height: 120px;*/
+			height: 140px;
+			padding: 2px;
+		}
+
+		.main > .header
+		{
+			width: auto;/*max-height: 50px;*/
+			height: 33px;
+			overflow: auto;
+			clear: both;
+		}
+
+		.main > .section
+		{
+			width: auto; /*max-height: 50px;*/
+			height: 108px;
+			overflow: auto;
+			clear: both;
+		}
+
+		/*ELIMINATO - NON ESISTE FOOTER SULLA MAIN
+		.main > .footer
+		{
+		width: auto;
+		height: 33px;
+		overflow: auto;
+		clear: both;
+		}
+		*/
+
+		.related
+		{
+			width: auto; /*max-height: 360px;*/
+			height: 360px;
+			margin-top: 2px;
+			margin-bottom: 2px;
+			padding: 2px;
+			border: 1px solid #EEEEEE;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+		}
+
+		.related > .header
+		{
+			width: auto; /*max-height: 50px;*/
+			height: 33px;
+			overflow: auto;
+			clear: both;
+			padding: 2px;
+		}
+
+		.related > .section
+		{
+			width: auto; /*max-height: 450px;*/
+			height: 284px;
+			overflow-y: scroll;
+			clear: both;
+			margin-top: 2px;
+			margin-bottom: 2px;
+			/*border-top: #555 solid 2px;*/
+			/*border-bottom: #555 solid 2px;*/
+		}
+
+		.related > .footer
+		{
+			bottom: 2px;
+			width: auto; /*max-height: 50px;*/
+			height: 33px;
+			overflow: auto;
+			clear: both;
+			padding: 2px;
+		}
+
+		/*LAYOUT end */
+
+		/* TYPOGRAPHY start*/
+
+		H1
+		{
+			font-size: 16px;
+			min-height: 25px;
+			color: #FFFFFF;
+		}
+
+		H2
+		{
+			font-size: 14px;
+			min-height: 25px;
+			color: #FFFFFF;
+		}
+
+		H3
+		{
+			font-size: 12px;
+			min-height: 25px;
+			color: #FFFFFF;
+		}
+
+		H4
+		{
+			display: block;
+			font-size: 11px;
+			line-height: 1.1em;
+			min-height: 25px;
+			color: #FFFFFF;
+		}
+
+		H5
+		{
+			font-size: 11px;
+			min-height: 25px;
+			color: #FFFFFF;
+		}
+
+		H6
+		{
+			font-size: 11px;
+			min-height: 25px;
+			color: #FFFFFF;
+		}
+
+		P
+		{
+			width: auto;
+			color: #FFFFFF;
+	/*		min-height: 25px;
+			border: 1px solid #444444;
+			-moz-border-radius: 4px; 
+			-webkit-border-radius: 4px;
+			background-color: green;
+			text-shadow: 1px 1px 1px #000000;
+	*/	
+		}
+
+		A:link, A:visited
+		{
+			color: #FFFFFF;
+			min-width: 17px;
+			/*viene allargato a 25px da 4px padding-left + 4px padding-right*/
+			min-height: 25px;
+			float: left;
+			display: block;
+			text-decoration: none;
+			line-height: 25px;
+			/*permette di centrare il testo verticalmente*/
+			margin: 1px;
+			margin-top: 0px;
+			/*padding-left: 6px;
+			padding-right: 3px;
+			padding-top: 3px;
+			padding-bottom: 3px;*/
+			border: 1px solid #DEDEDE;
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+		}
+		A:hover, A:focus
+		{
+			color: #FFFFFF;
+			border: 1px solid #DEDEDE;
+			background-color: #DEDEDE;
+		}
+		A:active
+		{
+			outline: none;
+			/*get rid of those system borders being generated for A tags*/
+		}
+
+	}
 }
 
-.related > .header
-{
-	width: auto; /*max-height: 50px;*/
-	height: 33px;
-	overflow: auto;
-	clear: both;
-	padding: 2px;
-}
-
-.related > .section
-{
-	width: auto; /*max-height: 450px;*/
-	height: 284px;
-	overflow-y: scroll;
-	clear: both;
-	margin-top: 2px;
-	margin-bottom: 2px;
-	/*border-top: #555 solid 2px;*/
-	/*border-bottom: #555 solid 2px;*/
-}
-
-.related > .footer
-{
-	bottom: 2px;
-	width: auto; /*max-height: 50px;*/
-	height: 33px;
-	overflow: auto;
-	clear: both;
-	padding: 2px;
-}
-
-/*LAYOUT end */
-
-/* TYPOGRAPHY start*/
-
-H1
-{
-	font-size: 16px;
-	min-height: 25px;
-}
-DIV.front_mode H1
-{
-	color: #000000;
-}
-DIV.edit_mode H1
-{
-	color: #FFFFFF;
-}
-H2
-{
-	font-size: 14px;
-	min-height: 25px;
-}
-DIV.front_mode H2
-{
-	color: #000000;
-}
-DIV.edit_mode H2
-{
-	color: #FFFFFF;
-}
-H3
-{
-	font-size: 12px;
-	min-height: 25px;
-}
-DIV.front_mode H3
-{
-	color: #EEE;
-}
-DIV.edit_mode H3
-{
-	color: #FFFFFF;
-}
-H4
-{
-	display: block;
-	font-size: 11px;
-	line-height: 1.1em;
-	min-height: 25px;
-}
-DIV.front_mode H4
-{
-	color: #CCC;
-}
-DIV.edit_mode H4
-{
-	color: #FFFFFF;
-}
-H5
-{
-	font-size: 11px;
-	min-height: 25px;
-}
-DIV.front_mode H5
-{
-	color: #CCC;
-}
-DIV.edit_mode H5
-{
-	color: #FFFFFF;
-}
-H6
-{
-	font-size: 11px;
-	min-height: 25px;
-}
-DIV.front_mode H6
-{
-	color: #CCC;
-}
-DIV.edit_mode H6
-{
-	color: #FFFFFF;
-}
-P
-{
-	width: auto;
-/*min-height: 25px;
-border: 1px solid #444444;
--moz-border-radius: 4px; /* CSS3 spicing
--webkit-border-radius: 4px; /* CSS3 spicing
-background-color: green;/*
-text-shadow: 1px 1px 1px #000000;*/
-}
-DIV.front_mode P
-{
-	color: #222222;
-/*background-color: #ff2233;*/
-}
-DIV.edit_mode P
-{
-	color: #FFFFFF;
-}
-A:link, A:visited
-{
-	min-width: 17px;
-/*viene allargato a 25px da 4px padding-left + 4px padding-right*/
-	min-height: 25px;
-	float: left;
-	display: block;
-	text-decoration: none;
-	line-height: 25px;
-/*permette di centrare il testo verticalmente*/
-	margin: 1px;
-	margin-top: 0px;
-/*padding-left: 6px;
-padding-right: 3px;
-padding-top: 3px;
-padding-bottom: 3px;*/
-	border: 1px solid #DEDEDE;
-	-moz-border-radius: 4px;
-/*CSS3 spicing*/
-	-webkit-border-radius: 4px;
-/*CSS3 spicing*/
-}
-A:hover, A:focus
-{
-	border: 1px solid #DEDEDE;
-	background-color: #DEDEDE;
-}
-A:active
-{
-	outline: none;
-/*get rid of those system borders being generated for A tags*/
-}
-DIV.front_mode A:link, DIV.front_mode A:visited
-{
-	color: #000000;
-}
-DIV.front_mode A:hover, DIV.front_mode A:focus
-{
-	color: #000000;
-}
-DIV.edit_mode A:link, DIV.edit_mode A:visited
-{
-	color: #FFFFFF;
-}
-DIV.edit_mode A:hover, DIV.edit_mode A:focus
-{
-	color: #FFFFFF;
-}
 B
 {
 	font-weight: bold;
@@ -361,8 +337,9 @@ ICONS start*/
 {
 	background-image: url("my_style_images/icons/window_new.png");
 }
-/*ICONS end
-NAVIGATION start*/
+/*ICONS end */
+
+/* NAVIGATION start*/
 UL.nav
 {
 	list-style-type: none;
@@ -394,8 +371,9 @@ UL.nav LI:first-child A
 height: 27px;
 padding-left: 26px;*/
 }
-/*NAVIGATION end
-PAGINATION start*/
+/*NAVIGATION end */
+
+/* PAGINATION start*/
 DIV.pagination
 {
 	list-style-type: none;
@@ -485,8 +463,10 @@ padding-bottom: 3px;*/
 	-webkit-border-radius: 4px;
 /*CSS3 spicing*/
 }
-/*PAGINATION end
-VIEW_LIST start*/
+/*PAGINATION end */
+
+
+/* VIEW_LIST start*/
 UL.view_list
 {
 	list-style-type: none;
@@ -527,8 +507,10 @@ UL.view_list > LI.alternate > A:hover, UL.view_list > LI.alternate > A:focus
 /**/
 	border: none;
 }
-/*VIEW_LIST end
-SEARCH INPUT start*/
+/*VIEW_LIST end */
+
+
+/* SEARCH INPUT start*/
 INPUT.search_input
 {
 /*min-width: 22px;*/
@@ -566,104 +548,12 @@ A.ico_search:hover, A.ico_search:focus
 	border: 1px solid #444;
 	border-left: none;
 }
-/*SEARCH INPUT end
-! OVERLAY BASE EXPOSE' start
-use a semi-transparent image for the overlay*/
-.overlay
-{
-	overflow-y: auto;
-	height: 460px;
-/*min-height: 200px;*/
-	width: 300px;
-	padding: 5px;
-/*some padding to layout nested elements nicely*/
-	display: none;
-/*initially overlay is hidden*/
-	background-color: #333333;
-	border: 1px solid #666666;
-	-moz-box-shadow: 0 0 10px 5px #000000;
-/*CSS3 styling for latest browsers*/
-	-webkit-box-shadow: 0 0 10px #000000;
-/*CSS3 styling for latest browsers*/
-	-moz-border-radius: 5px;
-/*CSS3 spicing*/
-	-webkit-border-radius: 5px;
-/*CSS3 spicing*/
-}
-DIV.edit_mode
-{
-/*overflow-y: auto;
-uses vertical scrollbar, if needed
-height: 200px;*/
-	background-color: #333333;
-}
-.overlay .close
-{
-	height: 32px;
-	width: 32px;
-	position: absolute;
-	right: 6px;
-	top: 2px;
-	background-image: url("my_style_images/close.png");
-	background-color: transparent;
-	cursor: pointer;
-}
-.overlay .close:hover
-{
-	border: 1px solid #333333;
-/*background-image: url("./my_style_images/closeHover.png");
-background-color: transparent;*/
-}
-/*OVERLAY BASE EXPOSE' end
-! REAR-MODE start
-use a semi-transparent image for the overlay*/
-.rear_mode_overlay
-{
-	width: 320px;
-/*iphone width*/
-	height: 492px;
-/*iphone height*/
-	margin: auto;
-	margin-top: 20px;
-	padding: 5px;
-	background-color: #333333;
-	border: 1px solid #666666;
-	-moz-box-shadow: 0 0 10px 5px #000000;
-/*CSS3 styling for latest browsers*/
-	-webkit-box-shadow: 0 0 10px #000000;
-/*CSS3 styling for latest browsers*/
-	-moz-border-radius: 5px;
-/*CSS3 spicing*/
-	-webkit-border-radius: 5px;
-/*CSS3 spicing*/
-}
-DIV.rear_mode
-{
-	background-color: #333333;
-}
-.rear_mode_overlay .close
-{
-	height: 36px;
-	width: 36px;
-	position: relative;
-	float: right;
-	left: 5px;
-	top: -5px;
-	background-image: url("my_style_images/close.png");
-	background-color: transparent;
-	cursor: pointer;
-	border: none;
-}
-.rear_mode_overlay .close:hover
-{
-	left: 4px;
-	top: -4px;
-/*border: 1px solid #333333;
-background-image: url("./my_style_images/closeHover.png");
-background-color: transparent;*/
-}
-/*REAR-MODE end
-! TABS start*/
+/*SEARCH INPUT end */
+
+
+
+
+/* ! TABS start*/
 UL.css-tabs
 {
 	height: 35px;
