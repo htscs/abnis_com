@@ -1,33 +1,13 @@
 class PeopleController < ApplicationController
 
-  def new
-    @person = Person.new
-    @previous_person_id = params[:current_person_id] #se non sono su person->person allora è nil
-    @previous_selected_related = params[:current_selected_related]
-    @user_id = session[:user_id]
-    @title = "Persona"
-  end
-
-  def create
-     #raise params[:person].inspect
-    @person = Person.new(params[:person])
-    if @person.save
-      #tratto utente salvato
-      #redirect_to user_path(session["user_id"]),
-      redirect_to @person, :flash => { :success => "nuova persona creata!"}
-    else
-      # mostro errori con partial shared/error_messages
-      @title = "Persona Errore"
-      render "new"
-    end 
-  end
-  
+  # GET /people
   def index
     @title = "All users"
     #@people = Person.all
     @people = Person.paginate :page => params[:page], :order => 'created_at DESC', :per_page => 6
   end
 
+  # GET /people/1
   def show
     @current_user_id = session["user_id"]
     @person = Person.find(params[:id])
@@ -47,11 +27,37 @@ class PeopleController < ApplicationController
     end      
   end
 
+  # GET /people/new
+  def new
+    @person = Person.new
+    @previous_person_id = params[:current_person_id] #se non sono su person->person allora è nil
+    @previous_selected_related = params[:current_selected_related]
+    @user_id = session[:user_id]
+    @title = "Persona"
+  end
+
+  # GET /people/1/edit
   def edit
     @person = Person.find(params[:id])
     @title = "modifica persona"
   end
 
+  # POST /people
+  def create
+     #raise params[:person].inspect
+    @person = Person.new(params[:person])
+    if @person.save
+      #tratto utente salvato
+      #redirect_to user_path(session["user_id"]),
+      redirect_to @person, :flash => { :success => "nuova persona creata!"}
+    else
+      # mostro errori con partial shared/error_messages
+      @title = "Persona Errore"
+      render "new"
+    end 
+  end
+
+  # PUT /people/1
   def update
     @person = Person.find(params[:id])
     if @person.update_attributes(params[:person])
@@ -63,6 +69,7 @@ class PeopleController < ApplicationController
     end
   end
 
+  # DELETE /people/1
   def destroy
     @person = Person.find(params[:id])
     @person.destroy

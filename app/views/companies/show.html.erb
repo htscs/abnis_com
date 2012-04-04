@@ -4,15 +4,16 @@
     <div class="header">
       <ul class="nav">
         <li>
-		  <%= link_to "home", users_select_home_path, :class => "ico_home" %>
+      <%= link_to "home", user_path(@current_user_id, :selected_related => 'companies'), :class => "ico_home" %> 
+        </li>
+        <li>
+      <%= link_to "Aziende", users_select_home_path, :class => "ico_company" %>
         </li>
       </ul>
     </div>
-
     <div class="section">
-      <p>Ciao <b><%= @user.name %></b> che facciamo?</p>
-      <%#= link_to user_path(@user.id), user_path(@user.id) %>
-      <p>Ultimo login 21/06/10 17:12</p>
+      <%= image_tag @company.image_url.to_s, :alt => "" %>      
+      <%= link_to "#{@company.name} #{@company.sector} #{@company.status} - #{@company.memo}", edit_company_path(@company.id), :class => "" %>
     </div>
 
   </div>
@@ -20,12 +21,8 @@
   <div class="related">    
     <% if @selected_related == 'favorites' %>
       <%= render "show_related_favorites" %>
-    <% elsif @selected_related == 'users' %>
-      <%= render "show_related_admin_users" %>
     <% elsif @selected_related == 'people' %>
       <%= render "show_related_people" %>    
-    <% elsif @selected_related == 'companies' %>
-      <%= render "show_related_companies" %>    
     <% end %>
   </div>
 

@@ -1,5 +1,6 @@
 <div class="rear_mode_overlay"> <!-- REAR_MODE start -->
-  <%= link_to "", user_path(@user_id, :selected_related => @selected_related), :class => 'close' %>
+  <%= link_to "", company_path(@company_id, :selected_related => @selected_related), :class => 'close' %>
+  <%#= link_to "", "#", :class => 'close' %>
   <div class="edit_mode"> <!-- EDIT start --> <!-- the external content is loaded inside this tag -->
     <ul class="css-tabs"> <!-- TABS start -->
       <li><a href="#" class="ico_select"></a></li>
@@ -16,13 +17,13 @@
         <nav>
           <ul class="list">
             <li>
-              <%= link_to "preferiti", user_path(@user_id, :selected_related => 'favorites'), :class => 'ico_favorite' %>
+              <%= link_to "preferiti", company_path(@company_id, :selected_related => 'favorites'), :class => 'ico_favorite' %>
             </li>
             <li>
-              <%= link_to "persone", user_path(@user_id, :selected_related => 'people'), :class => 'ico_person' %>
+              <%= link_to "persone", company_path(@company_id, :selected_related => 'people'), :class => 'ico_person' %>
             </li>
             <li>
-              <%= link_to "aziende", user_path(@user_id, :selected_related => 'companies'), :class => 'ico_company' %>
+              <%= link_to "aziende", company_path(@company_id, :selected_related => 'companies'), :class => 'ico_company' %>
             </li>
             <li>
 			  <%= link_to "prodotti", "#", :class => 'ico_product' %>
@@ -64,13 +65,13 @@
           <nav>
             <ul class="list">
 	            <li>
-	              <%= link_to "preferiti", user_path(@user_id, :selected_related => 'favorites'), :class => 'ico_favorite' %>
+	              <%= link_to "preferiti", "#", :class => 'ico_favorite' %>
 	            </li>
 	            <li>
-	              <%= link_to "persone", user_path(@user_id, :selected_related => 'people'), :class => 'ico_person' %>
+	              <%= link_to "persone", "#", :class => 'ico_person' %>
 	            </li>
 	            <li>
-				  <%= link_to "utenti", user_path(@user_id, :selected_related => 'users'), :class => 'ico_users' %>	            
+				  <%= link_to "utenti", "#", :class => 'ico_users' %>	            
 	            </li>
 	            <li>
 	              <%= link_to "aziende", "#", :class => 'ico_company' %>

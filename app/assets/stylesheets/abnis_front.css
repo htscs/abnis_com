@@ -1,4 +1,4 @@
-/*@override http://localhost:3000/stylesheets/my_style.css?1309967128
+/*
 CSS Document
 Filename: abnisDefault.css
 Title : Primary CSS file for abnis.com
@@ -6,147 +6,44 @@ Author : Flavio Bordoni, flavio.bordoni@fbfwebdesign.com
 URL : http://www.abnis.com/css/base.css
 License: Copyright 2010, Flavio Bordoni, All Rights Reserved.
 Feel free to read and learn from this, but please don't steal.
-
-! RESET start
- 
-html5doctor.com Reset Stylesheet v1.6.1
-Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com
 */
-HTML, BODY, DIV, SPAN, OBJECT, IFRAME, H1, H2, H3, H4, H5, H6, P, BLOCKQUOTE, PRE, ABBR, ADDRESS, CITE, CODE, DEL, DFN, EM, IMG, INS, KBD, Q, SAMP, SMALL, STRONG, SUB, SUP, VAR, B, I, DL, DT, DD, OL, UL, LI, FIELDSET, FORM, LABEL, LEGEND, TABLE, CAPTION, TBODY, TFOOT, THEAD, TR, TH, TD, ARTICLE, ASIDE, CANVAS, DETAILS, FIGCAPTION, FIGURE, FOOTER, HEADER, HGROUP, MENU, NAV, SECTION, SUMMARY, TIME, MARK, AUDIO, VIDEO
-{
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
-}
-BODY
-{
-	line-height: 1;
-}
-ARTICLE, ASIDE, DETAILS, FIGCAPTION, FIGURE, FOOTER, HEADER, HGROUP, MENU, NAV, SECTION
-{
-	display: block;
-}
-NAV UL
-{
-	list-style: none;
-}
-BLOCKQUOTE, Q
-{
-	quotes: none;
-}
-BLOCKQUOTE:before, BLOCKQUOTE:after, Q:before, Q:after
-{
-	content: '';
-	content: none;
-}
-A
-{
-	margin: 0;
-	padding: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
-}
-/*change colours to suit your needs*/
-INS
-{
-	background-color: #FF9;
-	color: #000;
-	text-decoration: none;
-}
-/*change colours to suit your needs*/
-MARK
-{
-	background-color: #FF9;
-	color: #000;
-	font-style: italic;
-	font-weight: bold;
-}
-DEL
-{
-	text-decoration: line-through;
-}
-ABBR[title], DFN[title]
-{
-	border-bottom: 1px dotted #000000;
-	cursor: help;
-}
-TABLE
-{
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-/*change border colour to suit your needs*/
-HR
-{
-	display: block;
-	height: 1px;
-	border: 0;
-	border-top: 1px solid #CCCCCC;
-	margin: 1em 0;
-	padding: 0;
-}
-INPUT, SELECT
-{
-	vertical-align: middle;
-}
-/*RESET end*/
-.debug
-{
-	background: #FFFFCC;
-	margin-top: 10px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 10px;
-	padding-left: 5px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	padding-right: 5px;
-}
+
 /*LAYOUT start*/
 FORM.view_mode, DIV.view_mode
 {
-	width: 320px;
-/*iphone width 320px*/
-	height: 512px;
-/*iphone height 492px*/
+	width: 320px; /*iphone width 320px*/
+	height: 512px; /*iphone height 492px*/
 	margin: auto;
 	margin-top: 20px;
 	padding: 2px;
 	border: 1px solid #EEEEEE;
-	-moz-border-radius: 5px;
-/*CSS3 spicing*/
-	-webkit-border-radius: 5px;
-/*CSS3 spicing*/
+	-moz-border-radius: 5px; /*CSS3 spicing*/
+	-webkit-border-radius: 5px; /*CSS3 spicing*/
 }
+
 .main
 {
-	width: auto;
-/*max-height: 120px;*/
+	width: auto; /*max-height: 120px;*/
 	height: 140px;
 	padding: 2px;
 }
+
 .main > .header
 {
-	width: auto;
-/*max-height: 50px;*/
+	width: auto;/*max-height: 50px;*/
 	height: 33px;
 	overflow: auto;
 	clear: both;
 }
+
 .main > .section
 {
-	width: auto;
-/*max-height: 50px;*/
+	width: auto; /*max-height: 50px;*/
 	height: 108px;
 	overflow: auto;
 	clear: both;
 }
+
 /*ELIMINATO - NON ESISTE FOOTER SULLA MAIN
 .main > .footer
 {
@@ -156,10 +53,10 @@ overflow: auto;
 clear: both;
 }
 */
+
 .related
 {
-	width: auto;
-/*max-height: 360px;*/
+	width: auto; /*max-height: 360px;*/
 	height: 360px;
 	margin-top: 2px;
 	margin-bottom: 2px;
@@ -168,39 +65,42 @@ clear: both;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 }
+
 .related > .header
 {
-	width: auto;
-/*max-height: 50px;*/
+	width: auto; /*max-height: 50px;*/
 	height: 33px;
 	overflow: auto;
 	clear: both;
 	padding: 2px;
 }
+
 .related > .section
 {
-	width: auto;
-/*max-height: 450px;*/
+	width: auto; /*max-height: 450px;*/
 	height: 284px;
 	overflow-y: scroll;
 	clear: both;
 	margin-top: 2px;
 	margin-bottom: 2px;
-/*border-top: #555 solid 2px;
-border-bottom: #555 solid 2px;*/
+	/*border-top: #555 solid 2px;*/
+	/*border-bottom: #555 solid 2px;*/
 }
+
 .related > .footer
 {
 	bottom: 2px;
-	width: auto;
-/*max-height: 50px;*/
+	width: auto; /*max-height: 50px;*/
 	height: 33px;
 	overflow: auto;
 	clear: both;
 	padding: 2px;
 }
-/*LAYOUT end
-! TYPOGRAPHY start*/
+
+/*LAYOUT end */
+
+/* TYPOGRAPHY start*/
+
 H1
 {
 	font-size: 16px;
@@ -359,7 +259,7 @@ INPUT
 }
 /*TYPOGRAPHY end
 ICONS start*/
-.ico_home, .ico_login, .ico_logout, .ico_person, .ico_company, .ico_product, .ico_project, .ico_new, .ico_new_disabled, .ico_favorite, .ico_delete, .ico_edit, .ico_option, .ico_language, .ico_language_it, LI A.ico_language_it P, .ico_language_us, LI A.ico_language_us P, .ico_select, .ico_select_all, .ico_tutorial, .ico_users, .ico_window_same, .ico_window_new
+.ico_home, .ico_login, .ico_logout, .ico_person, .ico_connect, .ico_company, .ico_product, .ico_project, .ico_new, .ico_new_disabled, .ico_favorite, .ico_delete, .ico_edit, .ico_option, .ico_language, .ico_language_it, LI A.ico_language_it P, .ico_language_us, LI A.ico_language_us P, .ico_select, .ico_select_all, .ico_tutorial, .ico_users, .ico_window_same, .ico_window_new
 {
 	text-indent: 24px;
 /*sposta il testo e permette di vedere l'icona*/
@@ -385,7 +285,10 @@ ICONS start*/
 {
 	background-image: url("my_style_images/icons/person.png");
 }
-.ico_company
+.ico_connect
+{
+	background-image: url("my_style_images/icons/connect.png");
+}.ico_company
 {
 	background-image: url("my_style_images/icons/company.png");
 }
@@ -912,6 +815,8 @@ IPHONE CHECKBOXES ONLY CSS3 start*/
 	background-position: -3px 0;
 }
 /*IPHONE CHECKBOXES ONLY CSS3 end
+
+
 IPHONE CHECKBOXES start*/
 .css_sized_container .iPhoneCheckContainer
 {
@@ -1029,7 +934,7 @@ FORM start*/
 .myform A
 {
 	clear: both;
-	width: 250px;
+	/*width: 250px;*/
 }
 .myform LABEL
 {

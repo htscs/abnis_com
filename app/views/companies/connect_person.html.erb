@@ -1,0 +1,77 @@
+<div class ="rear_mode_overlay"> <!-- REAR_MODE start -->
+  <%= link_to "", user_path(1, :selected_related => 'people', :page => @page_id.to_i), :class => "close" %>
+  <div class="edit_mode"> <!-- EDIT start --> <!-- the external content is loaded inside this tag -->   
+    <ul class="css-tabs"> <!-- TABS start -->
+      <li><a href="#" class="ico_connect"></a></li>
+    </ul> <!-- TABS end -->
+    <div class="css-panes"> <!-- PANES start -->
+      <div class="myform"> <!-- TAB 1s start -->
+
+
+
+
+        <h3>associa l'azienda alla persona</h3>
+
+        <div class="related"> 
+
+<div class="header">
+
+  <%#= link_to "", companies_select_related_path( :company_id => @company.id,:selected_related => 'people' ), :class => "ico_person" %>  
+  <%= link_to "", "#", :class => "ico_person" %>  
+
+  <%= form_tag company_path(1), :method => 'get' do %> <%# SEARCH %>
+    <%= hidden_field_tag :selected_related, 'people'  %>
+    <%= hidden_field_tag :page, 1  %>
+    <%= text_field_tag :trova, params[:trova], class: "search_input" %>
+    <%= submit_tag "", :name => nil, class: "ico_search" %> <%# vedi screencast Railcasts 037-simple-search-form %>
+  <% end %>
+
+  <% if @ico_new_status == "disabled" %>
+  <%= link_to "", '#', :class => "ico_new_disabled" %>
+  <% elsif @ico_new_status == "enabled" %>
+  
+    <%#= link_to "", companies_connect_person_path(:current_company_id => @company.id, :current_selected_related => 'people'), :class => "ico_new" %> 
+
+    <%= link_to "", '#', :class => "ico_new" %> 
+
+  <% end %> 
+
+</div>
+<div class="section">
+  <nav>
+    <ul class="view_list">          
+      <% @people.each do |person| %>
+        <li> <%# mettere alternato un  <li class="alternate"> %>
+                    
+          <%= link_to "#{person.first_name}", select_go_to_person_path(@user_id, :go_to_person => "#{person.id}", :page => @page_id), 
+                      :class => 'sx' %>
+                    
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+</div>
+<div class="footer">
+  <%#= will_paginate @people, :prev_label => '<<', :next_label => '>>', :inner_window => 0, :outer_window => 0 %>
+  <% if @people.previous_page %>
+    <%= link_to "<", params.merge(:page => @people.previous_page) %>
+  <% end%>
+  <a href="#"> Pagina <%= @people.current_page %> di <%= @people.total_pages %> </a>
+  <% if @people.next_page %>
+    <%= link_to ">", params.merge(:page => @people.next_page) %>
+  <% end %>
+
+  <div class="checkbox_attuale_archivio">
+    <input id="storico" name="1" type="checkbox" value="1" checked="checked"/>
+    <label for="storico">Check-me</label>
+  </div>
+
+</div>
+
+
+        </div>
+
+      </div> <!-- TAB 1 end -->
+    </div> <!-- PANES end -->
+  </div> <!-- EDIT end -->
+</div> <!-- REAR_MODE end -->

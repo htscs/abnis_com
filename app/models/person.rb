@@ -1,5 +1,8 @@
 class Person < ActiveRecord::Base
 
+  has_many :company_person_employments
+  has_many :companies, :through => :company_person_employments
+
   #attr_accessor   :password
   attr_accessible :title, :first_name, :last_name, :homonymy, :image, :tax_code, :male, :memo, :born_date
   mount_uploader :image, ImageUploader

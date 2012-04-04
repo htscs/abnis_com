@@ -1,0 +1,96 @@
+<div class="rear_mode_overlay"> <!-- EDIT - REAR_MODE start -->
+  <% if @previous_company_id == nil %>
+    <%= link_to "", company_path(@user_id, :selected_related => @previous_selected_related), :class => 'close' %>
+  <% else %>
+    <%= link_to "", company_path(@previous_company_id, :selected_related => @previous_selected_related), :class => 'close' %>
+  <% end %>
+
+  <div class="edit_mode"> <!-- EDIT start --> <!-- the external content is loaded inside this tag --> 
+    <ul class="css-tabs"> <!-- TABS start -->
+      <li><a href="#" class="ico_edit"></a></li>
+      <li><a href="#" class="ico_option"></a></li>
+      <li><a href="#" class="ico_delete"></a></li>
+    </ul> <!-- TABS end -->
+    <div class="css-panes"> <!-- PANES start -->
+
+      <div><!-- TAB 1 start -->
+      <%#= form_for(:session, :url => person_path, :method => "post", :html => {:id => 'myform3', :name => 'myform3' , :class => 'myform'}) do |f| %>
+      <%= form_for(@company, :html => {:id => 'myform3', :name => 'myform3' , :class => 'myform', :multipart => true }) do |f| %>
+        
+        <div class="header">
+          <h3>modifica</h3>
+        </div>
+
+        <div class="section">
+          <label for="name"> Nome: <%= f.text_field :name,:value => "#{@company.name}" %> </label>
+          <label for="sector"> Settore: <%= f.text_field :sector, :value => "#{@company.sector}" %> </label>
+          <label for="status"> Status: <%= f.text_field :status, :value => "#{@company.status}" %> </label>
+          <label for="memo"> note: <%= f.text_field :memo, :value => "#{@company.memo}" %> </label>      
+          <label for="image"> immagine: <%= f.file_field :image %></label>      
+        </div>
+
+        <div class="footer">
+			<%= f.submit "Esegui"%>
+        </div>
+
+      <% end %>
+      </div><!-- TAB 1 end -->
+
+
+      
+      <div> <!-- TAB 2 start -->
+        <form id='myform3' name='myform3' class='myform'>
+          <div class="header">
+            <h3>settaggi</h3>
+          </div>
+
+          <div class="section">
+            <label> Preferito Home </label>
+            <div class="checkbox_on_off">
+              <input id="preferito_home" name="1" type="checkbox" value="1" checked="checked"/>
+              <label for="preferito_home">Check-me</label>
+            </div>
+            <label> Storico </label>
+            <div class="checkbox_attuale_archivio">
+              <input id="storico" name="1" type="checkbox" value="1" />
+              <label for="storico">Check-me</label>
+            </div>
+          </div>
+
+          <div class="footer">
+            <button type="submit">Esegui</button>
+          </div>
+
+        </form>
+      </div>
+      
+      <div> <!-- TAB 3 start -->
+	  	<%= form_for( @company,:url=>{:action => 'destroy', :id => @company.id},
+	                  :html => {:id => 'my_form_destroy', :name => 'my_form_destroy' , :class => 'myform'}
+					) do |f| %>
+          <div class="header">
+            <h3>elimina azienda</h3>
+          </div>
+
+          <div class="section">
+            <p>Elimina l’oggetto azienda dal database. Se la azienda è in pensione scegliere opzioni –> storico = archivio perché così i riferimenti ai progetti ed alle pratiche restano. Se invece è una azienda creata per errore allora confermare.</p>
+            <label> Eliminare? </label>
+            <%#
+            <div class="checkbox_on_off">
+              <input id="elimina" name="1" type="checkbox" value="1" />
+              <label for="elimina">Check-me</label>
+            </div>
+            %>
+			<%= link_to 'elimina', company_path(@company_id, :selected_related => session[:selected_related]), confirm: 'Sei sicuro?', method: :delete %>
+          </div>
+
+          <div class="footer">
+			<%#= f.submit "Esegui"%>
+          </div>
+
+      	<% end %>
+      </div> <!-- TAB 3 end -->
+
+    </div> <!-- PANES end -->
+  </div> <!-- EDIT end -->
+</div> <!-- REAR_MODE end -->

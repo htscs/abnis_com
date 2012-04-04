@@ -1,0 +1,118 @@
+/*
+! RESET start
+ 
+	html5doctor.com Reset Stylesheet v1.6.1
+	Last Updated: 2010-09-17
+	Author: Richard Clark - http://richclarkdesign.com
+*/
+
+HTML, BODY, DIV, SPAN, OBJECT, IFRAME, H1, H2, H3, H4, H5, H6, P, BLOCKQUOTE, PRE, ABBR, ADDRESS, CITE, CODE, DEL, DFN, EM, IMG, INS, KBD, Q, SAMP, SMALL, STRONG, SUB, SUP, VAR, B, I, DL, DT, DD, OL, UL, LI, FIELDSET, FORM, LABEL, LEGEND, TABLE, CAPTION, TBODY, TFOOT, THEAD, TR, TH, TD, ARTICLE, ASIDE, CANVAS, DETAILS, FIGCAPTION, FIGURE, FOOTER, HEADER, HGROUP, MENU, NAV, SECTION, SUMMARY, TIME, MARK, AUDIO, VIDEO
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+BODY
+{
+	line-height: 1;
+}
+
+ARTICLE, ASIDE, DETAILS, FIGCAPTION, FIGURE, FOOTER, HEADER, HGROUP, MENU, NAV, SECTION
+{
+	display: block;
+}
+
+NAV UL
+{
+	list-style: none;
+}
+
+BLOCKQUOTE, Q
+{
+	quotes: none;
+}
+
+BLOCKQUOTE:before, BLOCKQUOTE:after, Q:before, Q:after
+{
+	content: '';
+	content: none;
+}
+
+A
+{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+/*change colours to suit your needs*/
+
+INS
+{
+	background-color: #FF9;
+	color: #000;
+	text-decoration: none;
+}
+/*change colours to suit your needs*/
+
+MARK
+{
+	background-color: #FF9;
+	color: #000;
+	font-style: italic;
+	font-weight: bold;
+}
+
+DEL
+{
+	text-decoration: line-through;
+}
+
+ABBR[title], DFN[title]
+{
+	border-bottom: 1px dotted #000000;
+	cursor: help;
+}
+
+TABLE
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*change border colour to suit your needs*/
+HR
+{
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #CCCCCC;
+	margin: 1em 0;
+	padding: 0;
+}
+
+INPUT, SELECT
+{
+	vertical-align: middle;
+}
+
+/*RESET end*/
+
+.debug
+{
+	background: #FFFFCC;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+}

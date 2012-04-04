@@ -1,0 +1,49 @@
+<div class="header">
+  <%= link_to "", users_select_related_path( :selected_related => 'companies' ), :class => "ico_company" %>  
+
+
+	<%= form_tag user_path(@user.id), :method => 'get' do %>
+		<%= hidden_field_tag :selected_related, 'companies'  %>
+    <%= hidden_field_tag :page, 1  %>
+		<%= text_field_tag :trova, params[:trova], class: "search_input" %>
+		<%= submit_tag "", :name => nil, class: "ico_search" %>
+	<% end %>
+
+	
+  <% if @ico_new_status == "disabled" %>
+    <%= link_to "", '#', :class => "ico_new_disabled" %>
+  <% elsif @ico_new_status == "enabled" %>
+    <%= link_to "", new_company_path(:current_company_id => nil, :current_selected_related => 'companies'), :class => "ico_new" %>  
+  <% end %>
+    
+
+</div>
+<div class="section">
+  <nav>
+    <ul class="view_list">          
+      <% @companies.each do |company| %>
+        <li> <%# mettere alternato un  <li class="alternate"> %>
+                    
+          <%= link_to "#{company.name}", company_path(company.id, :selected_related => 'favorites'), :class => 'sx' %>
+          <%= link_to "...", select_go_to_company_path(@user.id, :go_to_company => "#{company.id}", :page => @page_id), :class => 'dx' %>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+</div>
+<div class="footer">
+	<%#= will_paginate @people, :prev_label => '<<', :next_label => '>>', :inner_window => 0, :outer_window => 0 %>
+	<% if @companies.previous_page %>
+		<%= link_to "<", params.merge(:page => @companies.previous_page) %>
+	<% end%>
+	<a href="#"> Pagina <%= @companies.current_page %> di <%= @companies.total_pages %> </a>
+	<% if @companies.next_page %>
+		<%= link_to ">", params.merge(:page => @companies.next_page) %>
+	<% end%>
+
+  <div class="checkbox_attuale_archivio">
+    <input id="storico" name="1" type="checkbox" value="1" checked="checked"/>
+    <label for="storico">Check-me</label>
+  </div>
+
+</div>

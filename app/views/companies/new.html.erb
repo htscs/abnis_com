@@ -1,0 +1,41 @@
+<div class="rear_mode_overlay"> <!-- EDIT - REAR_MODE start -->
+  <% if @previous_company_id == nil %>
+    <%= link_to "", company_path(@user_id, :selected_related => @previous_selected_related), :class => 'close' %>
+  <% else %>
+    <%= link_to "", company_path(@previous_company_id, :selected_related => @previous_selected_related), :class => 'close' %>
+  <% end %>
+  <div class="edit_mode"> <!-- EDIT start --> <!-- the external content is loaded inside this tag --> 
+    <ul class="css-tabs"> <!-- TABS start -->
+      <li><a href="#" class="ico_new"></a></li>
+    </ul> <!-- TABS end -->
+    <div class="css-panes"> <!-- PANES start -->
+
+      <div><!-- TAB 1 start -->
+
+
+      <%= form_for(@company, :html => {:id => 'myform3', :name => 'myform3' , :class => 'myform'}) do |f| %>
+        
+        <div class="header">
+          <h1>Nuova Azienda</h1>
+        </div>
+
+        <div class="section">
+          <label for="title"> Nome: <%= f.text_field :name,:value => "azienda" %> </label>          
+          <label for="sector"> Settore: <%= f.text_field :sector, :value => "informatica" %> </label>
+          <label for="status"> Status: <%= f.text_field :status, :value => "fornitore" %> </label>
+          <label for="memo"> note: <%= f.text_field :memo, :value => "" %> </label>          
+        </div>
+
+        <div class="footer">
+			<%= f.submit "Esegui"%>
+        </div>
+
+      <% end %>
+
+
+      </div><!-- TAB 1 end -->
+
+
+    </div> <!-- PANES end -->
+  </div> <!-- EDIT end -->
+</div> <!-- REAR_MODE end -->

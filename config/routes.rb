@@ -4,16 +4,20 @@ AbnisCom::Application.routes.draw do
 
     resources :users
     resources :sessions, :only => [:new, :create, :destroy]
+    resources :companies
     resources :people
 
-    #match "/home",                   :to => "home#show" #named route: home_path
-    match "/login",                   :to => "sessions#new" #named route: login_path
-    match "/logout",                  :to => "sessions#destroy" #named route: logout_path
-    match "/signup",                  :to => "users#new" #named route: signup_path
-    match "/select_go_to_person",     :to => "users#select_go_to_person" #named route: select_go_to_person_path
-    match "/users_select_related",    :to => "users#select_related" #named route: users_select_related_path
-    match "/users_select_home",    	  :to => "users#select_home" #named route: users_select_home_path
-    match "/people_select_related",   :to => "people#select_related" #named route: people_select_related_path
+    #match "/home",                     :to => "home#show" #named route: home_path
+    match "/login",                     :to => "sessions#new" #named route: login_path
+    match "/logout",                    :to => "sessions#destroy" #named route: logout_path
+    match "/signup",                    :to => "users#new" #named route: signup_path
+    match "/select_go_to_person",       :to => "users#select_go_to_person" #named route: select_go_to_person_path
+    match "/select_go_to_company",      :to => "users#select_go_to_company" #named route: select_go_to_company_path
+    match "/users_select_related",      :to => "users#select_related" #named route: users_select_related_path
+    match "/users_select_home",    	    :to => "users#select_home" #named route: users_select_home_path
+    match "/people_select_related",     :to => "people#select_related" #named route: people_select_related_path
+    match "/companies_select_related",  :to => "companies#select_related" #named route: companies_select_related_path
+    match "/companies_connect_person",  :to => "companies#connect_person" #named route: companies_connect_person_path
 
   #  resources :xxxs
   #

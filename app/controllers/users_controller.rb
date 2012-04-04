@@ -44,6 +44,8 @@ class UsersController < ApplicationController
     elsif @selected_related == 'people'
       # @people = Person.paginate :page => params[:page], :order => 'created_at DESC', :per_page => 25
       @people = Person.search(params[:trova]).page(params[:page]).per_page(25).order('created_at DESC')
+    elsif @selected_related == 'companies'
+      @companies = Company.search(params[:trova]).page(params[:page]).per_page(25).order('created_at DESC')
     end  
     #
     if params[:trova] == nil || params[:trova] == ""
@@ -80,6 +82,16 @@ class UsersController < ApplicationController
   def select_go_to_person
     @title = "Go to person"
     @person_id = params[:go_to_person]
+    if params[:page]
+      @page_id = params[:page]
+    else
+      @page_id = 1
+    end
+  end
+
+  def select_go_to_company
+    @title = "Go to company"
+    @company_id = params[:go_to_company]
     if params[:page]
       @page_id = params[:page]
     else
