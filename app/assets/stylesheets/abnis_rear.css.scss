@@ -1,6 +1,6 @@
 /*
 CSS Document
-Filename: abnisDefault.css
+Filename: abnis_rear.css
 Title : Primary CSS file for abnis.com
 Author : Flavio Bordoni, flavio.bordoni@fbfwebdesign.com
 URL : http://www.abnis.com/css/base.css
@@ -8,6 +8,7 @@ License: Copyright 2010, Flavio Bordoni, All Rights Reserved.
 Feel free to read and learn from this, but please don't steal.
 */
 
+/* REAR_MODE start */
 FORM.rear_mode_overlay, DIV.rear_mode_overlay
 {
 	/*LAYOUT start*/
@@ -48,6 +49,7 @@ FORM.rear_mode_overlay, DIV.rear_mode_overlay
 		background-color: transparent;*/
 	}
 
+	/* EDIT_MODE start */
 	.edit_mode{
 /*		position: relative;
 */	
@@ -221,718 +223,620 @@ FORM.rear_mode_overlay, DIV.rear_mode_overlay
 			/*get rid of those system borders being generated for A tags*/
 		}
 
+		B
+		{
+			font-weight: bold;
+		}
+
+		INPUT
+		{
+			font-family: georgia;
+			font-size: 16px;
+		}
+		
+		/*TYPOGRAPHY end*/
+
+		/* NAVIGATION start*/
+		UL.nav
+		{
+			list-style-type: none;
+		/*important for the navigation bar
+		background: red;
+		for debug
+		border-bottom: 2px solid yellow;
+		for debug*/
+		}
+		UL.nav LI
+		{
+			padding-left: 16px;
+			float: left;
+			background: url("my_style_images/goTo.png") no-repeat left;
+		}
+		UL.nav LI:first-child
+		{
+		/*height: 25px;*/
+			padding-left: 0px;
+		/*padding-right: 2px;*/
+			float: left;
+			background: none;
+		}
+		UL.nav LI:first-child A
+		{
+			background-position: 2px;
+			text-indent: 25px;
+		/*sposta il testo e permette di vedere l'icona
+		height: 27px;
+		padding-left: 26px;*/
+		}
+		/*NAVIGATION end */
+
+		/* PAGINATION start*/
+		DIV.pagination
+		{
+			list-style-type: none;
+		}
+		DIV.pagination A
+		{
+			height: 25px;
+			padding-left: 0px;
+			float: left;
+			background-color: #FF0000;
+		}
+		DIV.pagination SPAN.previous_page.disabled, DIV.pagination SPAN.next_page.disabled
+		{
+			height: 25px;
+			padding-left: 0px;
+			float: left;
+			background-color: #008000;
+			min-width: 17px;
+		/*viene allargato a 25px da 4px padding-left + 4px padding-right*/
+			min-height: 25px;
+			float: left;
+			display: block;
+			text-decoration: none;
+			line-height: 25px;
+		/*permette di centrare il testo verticalmente*/
+			margin: 1px;
+			margin-top: 0px;
+		/*padding-left: 6px;
+		padding-right: 3px;
+		padding-top: 3px;
+		padding-bottom: 3px;*/
+			border: 1px solid #DEDEDE;
+			-moz-border-radius: 4px;
+		/*CSS3 spicing*/
+			-webkit-border-radius: 4px;
+		/*CSS3 spicing*/
+		}
+		DIV.pagination EM
+		{
+			height: 25px;
+			padding-left: 0px;
+			float: left;
+			background-color: #FFFF00;
+			min-width: 17px;
+		/*viene allargato a 25px da 4px padding-left + 4px padding-right*/
+			min-height: 25px;
+			float: left;
+			display: block;
+			text-decoration: none;
+			line-height: 25px;
+		/*permette di centrare il testo verticalmente*/
+			margin: 1px;
+			margin-top: 0px;
+		/*padding-left: 6px;
+		padding-right: 3px;
+		padding-top: 3px;
+		padding-bottom: 3px;*/
+			border: 1px solid #DEDEDE;
+			-moz-border-radius: 4px;
+		/*CSS3 spicing*/
+			-webkit-border-radius: 4px;
+		/*CSS3 spicing*/
+		}
+		DIV.pagination SPAN.gap
+		{
+			height: 25px;
+			padding-left: 0px;
+			float: left;
+			background-color: #FFFF00;
+			min-width: 17px;
+		/*viene allargato a 25px da 4px padding-left + 4px padding-right*/
+			min-height: 25px;
+			float: left;
+			display: block;
+			text-decoration: none;
+			line-height: 25px;
+		/*permette di centrare il testo verticalmente*/
+			margin: 1px;
+			margin-top: 0px;
+		/*padding-left: 6px;
+		padding-right: 3px;
+		padding-top: 3px;
+		padding-bottom: 3px;*/
+			border: 1px solid #DEDEDE;
+			-moz-border-radius: 4px;
+		/*CSS3 spicing*/
+			-webkit-border-radius: 4px;
+		/*CSS3 spicing*/
+		}
+		/*PAGINATION end */
+
+
+		/*MYFORM start*/
+		.myform
+		{
+			background: #333;
+		/*padding:15px 20px;*/
+			padding-left: 2px;
+			color: #EEE;
+		/*width:400px;*/
+			margin: 0 auto;
+			position: relative;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+		}
+		.myform A
+		{
+			clear: both;
+			/*width: 250px;*/
+		}
+		.myform LABEL
+		{
+			font-size: 11px;
+			margin-bottom: 8px;
+			display: block;
+		}
+		.myform LABEL INPUT
+		{
+			display: block;
+			width: 94%;
+		}
+		/*typography*/
+		.myform H3
+		{
+			color: #EEE;
+			margin-top: 0px;
+		}
+		.myform P
+		{
+			font-size: 11px;
+		}
+		/*input field*/
+		.myform INPUT, .myform BUTTON
+		{
+			border: 1px solid #444;
+			background-color: #666;
+			padding: 5px;
+			color: #DDD;
+			font-size: 12px;
+		/*CSS3 spicing*/
+			text-shadow: 1px 1px 1px #000;
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+		}
+		.myform BUTTON
+		{
+			float: left;
+			margin-top: 10px;
+		}
+		.myform INPUT:focus, .myform BUTTON:focus
+		{
+			color: #FFF;
+			background-color: #777;
+		}
+		.myform BUTTON:focus, .myform BUTTON:hover
+		{
+			cursor: pointer;
+		}
+		.myform INPUT:active, .myform BUTTON:active
+		{
+			background-color: #888;
+		}
+		/*error message*/
+		.error
+		{
+			z-index: 9999999999;
+			height: 15px;
+			background-color: #FFFE36;
+			font-size: 11px;
+			border: 1px solid #E1E16D;
+			padding: 4px 10px;
+			color: #000;
+			display: none;
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+			-moz-border-radius-bottomleft: 0;
+			-moz-border-radius-topleft: 0;
+			-webkit-border-bottom-left-radius: 0;
+			-webkit-border-top-left-radius: 0;
+			-moz-box-shadow: 0 0 6px #ddd;
+			-webkit-box-shadow: 0 0 6px #ddd;
+		}
+		.error
+		{
+			margin: 0 0 2px;
+			padding: 2px 6px;
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+		}
+		.error P
+		{
+			margin: 0;
+		}
+		.error EM
+		{
+			border: 10px solid #000000;
+			border-color: #FFFE36 transparent transparent;
+			bottom: -17px;
+			display: block;
+			height: 0;
+			left: 60px;
+			position: absolute;
+			width: 0;
+		}
+		/*field label*/
+		LABEL
+		{
+			display: block;
+			font-size: 11px;
+			color: #CCC;
+		}
+		#terms LABEL
+		{
+			float: left;
+		}
+		#terms INPUT
+		{
+			margin: 0 5px;
+		}
+		/*MYFORM end*/
+
+
+		/* VIEW_LIST start*/
+		UL.view_list
+		{
+			list-style-type: none;
+		/*important for the navigation bar
+		background: red; /*for debug
+		border-bottom: 2px solid yellow;/*for debug*/
+		}
+		UL.view_list > LI > A.sx
+		{
+			float: left;
+			background: #F5F5F5;
+		/**/
+			width: 270px;
+			border: none;
+		}
+		UL.view_list > LI > A.dx
+		{
+			float: left;
+			background: #F5F5F5;
+		/**/
+			width: 10px;
+			border: none;
+		}
+		UL.view_list > LI > A:hover, UL.view_list > LI > A:focus
+		{
+			background: #DEDEDE;
+		/**/
+		}
+		UL.view_list > LI.alternate > A
+		{
+			background: #F8F8F8;
+		/*#6FA4FE*/
+			border: none;
+		}
+		UL.view_list > LI.alternate > A:hover, UL.view_list > LI.alternate > A:focus
+		{
+			background: #DEDEDE;
+		/**/
+			border: none;
+		}
+		/*VIEW_LIST end */
+
+		/* SEARCH INPUT start*/
+		INPUT.search_input
+		{
+		/*min-width: 22px;*/
+			width: 150px;
+			min-height: 23px;
+			float: left;
+			display: block;
+			margin-top: 0px;
+			margin-right: 0px;
+			padding-right: 0px;
+		/*padding: 0px;
+		text-shadow: 1px 1px 1px #000;*/
+			border: 1px solid #DEDEDE;
+			-moz-border-radius: 4px 0px 0px 4px;
+		/*CSS3 spicing topLeft topRight BottomRight bottomLeft*/
+			-webkit-border-radius: 4px 0px 0px 4px;
+		/*CSS3 spicing topLeft topRight BottomRight bottomLeft*/
+		}
+		A.ico_search, INPUT.ico_search
+		{
+			float: left;
+			width: 27px;
+			padding-left: 0px;
+			margin-left: 0px;
+			background: url("my_style_images/search.png") no-repeat 1px;
+			border-left: none;
+			-moz-border-radius: 0px 4px 4px 0px;
+		/*CSS3 spicing topLeft topRight BottomRight bottomLeft*/
+			-webkit-border-radius: 0px 4px 4px 0px;
+		/*CSS3 spicing topLeft topRight BottomRight bottomLeft*/
+		}
+		A.ico_search:hover, A.ico_search:focus
+		{
+			background-color: #888;
+			border: 1px solid #444;
+			border-left: none;
+		}
+		/*SEARCH INPUT end */
+
+		/* ! TABS start*/
+		UL.css-tabs
+		{
+			height: 35px;
+			margin: 0 !important;
+			padding: 0;
+		/*border-bottom: 1px solid #666;*/
+			background-color: inherit;
+		}
+		UL.css-tabs LI
+		{
+			height: 35px;
+			float: left;
+			padding: 0;
+			margin: 0;
+			background-color: inherit;
+			list-style-type: none;
+		}
+		UL.css-tabs A
+		{
+		/*height: 25px;*/
+			min-width: 22px;
+			max-width: 72px;
+			padding: 5px 1px 1px;
+			margin-right: 2px;
+			position: relative;
+			float: left;
+			top: 1px;
+			text-decoration: none;
+			display: block;
+			background-color: #FFFFFF;
+			color: #777777;
+			outline: 0;
+			border: 1px solid #666;
+		/*border-bottom: 0px;*/
+			-moz-border-radius: 0px 4px;
+		/*CSS3 spicing*/
+			-webkit-border-radius: 0px 4px;
+		/*CSS3 spicing*/
+		}
+		UL.css-tabs A:hover
+		{
+			background-color: transparent;
+			color: #333333;
+		}
+		UL.css-tabs A.current
+		{
+			background-color: transparent;
+		/*background-image: url("./my_style_images/arrow.png") no-repeat 10px;*/
+			border: none;
+			color: #FFFFFF;
+			cursor: default;
+		}
+		.css-panes > DIV
+		{
+		/*overflow-y: auto;
+		height: 400px;
+		min-height: 150px;
+		padding: 2px;*/
+			display: none;
+			border: 1px solid #333333;
+			border-width: 0 1px 1px;
+			background-color: inherit;
+		}
+		.css-panes > DIV DIV.header
+		{
+			width: auto;
+		/*max-height: 50px;*/
+			height: 26px;
+			padding-top: 4px;
+			padding-bottom: 4px;
+			overflow: auto;
+			clear: both;
+		}
+		.css-panes > DIV DIV.section
+		{
+			width: auto;
+			overflow-y: auto;
+		/*max-height: 50px;*/
+			max-height: 350px;
+			overflow: auto;
+			clear: both;
+		}
+		.css-panes > DIV DIV.footer
+		{
+			width: auto;
+		/*max-height: 50px;*/
+			height: 40px;
+			overflow: auto;
+			clear: both;
+		}
+		/*TABS end*/
+
+		/*IPHONE CHECKBOXES ONLY CSS3 start*/
+		.checkbox_on_off
+		{
+			display: block;
+			width: 94px;
+			height: 27px;
+			overflow: hidden;
+			border-radius: 3px;
+		}
+		.checkbox_on_off INPUT[type=checkbox]
+		{
+			display: none;
+		}
+		.checkbox_on_off INPUT[type=checkbox] + LABEL
+		{
+			text-indent: -9999px;
+			display: block;
+			width: 150px;
+			height: 27px;
+			line-height: 27px;
+			background: transparent url("/assets/my_style_images/iphone_style_checkboxes/on_off.png") no-repeat -56px 0;
+			-webkit-transition: background-position 0.3s ease-in-out;
+			-moz-transition: background-position 0.3s ease-in-out;
+		}
+		.checkbox_on_off INPUT[type=checkbox]:checked + LABEL
+		{
+			-webkit-transition: background-position 0.3s ease-in-out;
+			-moz-transition: background-position 0.3s ease-in-out;
+			background-position: -3px 0;
+		}
+		.checkbox_attuale_archivio
+		{
+			display: block;
+			width: 94px;
+			height: 27px;
+			overflow: hidden;
+			border-radius: 3px;
+		}
+		.checkbox_attuale_archivio INPUT[type=checkbox]
+		{
+			display: none;
+		}
+		.checkbox_attuale_archivio INPUT[type=checkbox] + LABEL
+		{
+			text-indent: -9999px;
+			display: block;
+			width: 150px;
+			height: 27px;
+			line-height: 27px;
+			background: transparent url("/assets/my_style_images/iphone_style_checkboxes/attuale_archivio.png") no-repeat -56px 0;
+			-webkit-transition: background-position 0.3s ease-in-out;
+			-moz-transition: background-position 0.3s ease-in-out;
+		}
+		.checkbox_attuale_archivio INPUT[type=checkbox]:checked + LABEL
+		{
+			-webkit-transition: background-position 0.3s ease-in-out;
+			-moz-transition: background-position 0.3s ease-in-out;
+			background-position: -3px 0;
+		}
+		/*IPHONE CHECKBOXES ONLY CSS3 end*/
+
+
+		/*ICONS start*/
+		.ico_home, .ico_login, .ico_logout, .ico_person, .ico_connect, .ico_company, .ico_product, .ico_project, .ico_new, .ico_new_disabled, .ico_favorite, .ico_delete, .ico_edit, .ico_option, .ico_language, .ico_language_it, LI A.ico_language_it P, .ico_language_us, LI A.ico_language_us P, .ico_select, .ico_select_all, .ico_tutorial, .ico_users, .ico_window_same, .ico_window_new
+		{
+			text-indent: 24px;
+		/*sposta il testo e permette di vedere l'icona*/
+			padding-left: 4px;
+		/*sposta il testo ma allunga anche il block*/
+			padding-right: 4px;
+			background-repeat: no-repeat;
+			background-position: 2px;
+		}
+		.ico_home
+		{
+			background-image: url("my_style_images/icons/home.png");
+		}
+		.ico_login
+		{
+			background-image: url("my_style_images/icons/login.png");
+		}
+		.ico_logout
+		{
+			background-image: url("my_style_images/icons/logout.png");
+		}
+		.ico_person
+		{
+			background-image: url("my_style_images/icons/person.png");
+		}
+		.ico_connect
+		{
+			background-image: url("my_style_images/icons/connect.png");
+		}.ico_company
+		{
+			background-image: url("my_style_images/icons/company.png");
+		}
+		.ico_product
+		{
+			background-image: url("my_style_images/icons/product.png");
+		}
+		.ico_project
+		{
+			background-image: url("my_style_images/icons/project.png");
+		}
+		.ico_new
+		{
+			background-image: url("my_style_images/icons/new.png");
+		}
+		.ico_new_disabled
+		{
+			background-image: url("my_style_images/icons/new_disabled.png");
+
+		}
+		.ico_favorite
+		{
+			background-image: url("my_style_images/icons/favorite.png");
+		}
+		.ico_delete
+		{
+			background-image: url("my_style_images/icons/delete.png");
+		}
+		.ico_edit
+		{
+			background-image: url("my_style_images/icons/edit.png");
+		}
+		.ico_option
+		{
+			background-image: url("my_style_images/icons/option.png");
+		}
+		.ico_language
+		{
+			background-image: url("my_style_images/icons/language.png");
+		}
+		.ico_language_it, LI A.ico_language_it P
+		{
+			background-image: url("my_style_images/icons/language_it.png");
+		}
+		.ico_language_us, LI A.ico_language_us P
+		{
+			background-image: url("my_style_images/icons/language_us.png");
+		}
+		.ico_select
+		{
+			background-image: url("my_style_images/icons/select.png");
+		}
+		.ico_select_all
+		{
+			background-image: url("my_style_images/icons/select_all.png");
+		}
+		.ico_tutorial
+		{
+			background-image: url("my_style_images/icons/tutorial.png");
+		}
+		.ico_users
+		{
+			background-image: url("my_style_images/icons/users.png");
+		}
+		.ico_window_same
+		{
+			background-image: url("my_style_images/icons/window_same.png");
+		}
+		.ico_window_new
+		{
+			background-image: url("my_style_images/icons/window_new.png");
+		}
+		/*ICONS end */
+
 	}
+	/* EDIT_MODE end */
 }
-
-B
-{
-	font-weight: bold;
-}
-INPUT
-{
-	font-family: georgia;
-	font-size: 16px;
-}
-/*TYPOGRAPHY end
-ICONS start*/
-.ico_home, .ico_login, .ico_logout, .ico_person, .ico_connect, .ico_company, .ico_product, .ico_project, .ico_new, .ico_new_disabled, .ico_favorite, .ico_delete, .ico_edit, .ico_option, .ico_language, .ico_language_it, LI A.ico_language_it P, .ico_language_us, LI A.ico_language_us P, .ico_select, .ico_select_all, .ico_tutorial, .ico_users, .ico_window_same, .ico_window_new
-{
-	text-indent: 24px;
-/*sposta il testo e permette di vedere l'icona*/
-	padding-left: 4px;
-/*sposta il testo ma allunga anche il block*/
-	padding-right: 4px;
-	background-repeat: no-repeat;
-	background-position: 2px;
-}
-.ico_home
-{
-	background-image: url("my_style_images/icons/home.png");
-}
-.ico_login
-{
-	background-image: url("my_style_images/icons/login.png");
-}
-.ico_logout
-{
-	background-image: url("my_style_images/icons/logout.png");
-}
-.ico_person
-{
-	background-image: url("my_style_images/icons/person.png");
-}
-.ico_connect
-{
-	background-image: url("my_style_images/icons/connect.png");
-}.ico_company
-{
-	background-image: url("my_style_images/icons/company.png");
-}
-.ico_product
-{
-	background-image: url("my_style_images/icons/product.png");
-}
-.ico_project
-{
-	background-image: url("my_style_images/icons/project.png");
-}
-.ico_new
-{
-	background-image: url("my_style_images/icons/new.png");
-}
-.ico_new_disabled
-{
-	background-image: url("my_style_images/icons/new_disabled.png");
-
-}
-.ico_favorite
-{
-	background-image: url("my_style_images/icons/favorite.png");
-}
-.ico_delete
-{
-	background-image: url("my_style_images/icons/delete.png");
-}
-.ico_edit
-{
-	background-image: url("my_style_images/icons/edit.png");
-}
-.ico_option
-{
-	background-image: url("my_style_images/icons/option.png");
-}
-.ico_language
-{
-	background-image: url("my_style_images/icons/language.png");
-}
-.ico_language_it, LI A.ico_language_it P
-{
-	background-image: url("my_style_images/icons/language_it.png");
-}
-.ico_language_us, LI A.ico_language_us P
-{
-	background-image: url("my_style_images/icons/language_us.png");
-}
-.ico_select
-{
-	background-image: url("my_style_images/icons/select.png");
-}
-.ico_select_all
-{
-	background-image: url("my_style_images/icons/select_all.png");
-}
-.ico_tutorial
-{
-	background-image: url("my_style_images/icons/tutorial.png");
-}
-.ico_users
-{
-	background-image: url("my_style_images/icons/users.png");
-}
-.ico_window_same
-{
-	background-image: url("my_style_images/icons/window_same.png");
-}
-.ico_window_new
-{
-	background-image: url("my_style_images/icons/window_new.png");
-}
-/*ICONS end */
-
-/* NAVIGATION start*/
-UL.nav
-{
-	list-style-type: none;
-/*important for the navigation bar
-background: red;
-for debug
-border-bottom: 2px solid yellow;
-for debug*/
-}
-UL.nav LI
-{
-	padding-left: 16px;
-	float: left;
-	background: url("my_style_images/goTo.png") no-repeat left;
-}
-UL.nav LI:first-child
-{
-/*height: 25px;*/
-	padding-left: 0px;
-/*padding-right: 2px;*/
-	float: left;
-	background: none;
-}
-UL.nav LI:first-child A
-{
-	background-position: 2px;
-	text-indent: 25px;
-/*sposta il testo e permette di vedere l'icona
-height: 27px;
-padding-left: 26px;*/
-}
-/*NAVIGATION end */
-
-/* PAGINATION start*/
-DIV.pagination
-{
-	list-style-type: none;
-}
-DIV.pagination A
-{
-	height: 25px;
-	padding-left: 0px;
-	float: left;
-	background-color: #FF0000;
-}
-DIV.pagination SPAN.previous_page.disabled, DIV.pagination SPAN.next_page.disabled
-{
-	height: 25px;
-	padding-left: 0px;
-	float: left;
-	background-color: #008000;
-	min-width: 17px;
-/*viene allargato a 25px da 4px padding-left + 4px padding-right*/
-	min-height: 25px;
-	float: left;
-	display: block;
-	text-decoration: none;
-	line-height: 25px;
-/*permette di centrare il testo verticalmente*/
-	margin: 1px;
-	margin-top: 0px;
-/*padding-left: 6px;
-padding-right: 3px;
-padding-top: 3px;
-padding-bottom: 3px;*/
-	border: 1px solid #DEDEDE;
-	-moz-border-radius: 4px;
-/*CSS3 spicing*/
-	-webkit-border-radius: 4px;
-/*CSS3 spicing*/
-}
-DIV.pagination EM
-{
-	height: 25px;
-	padding-left: 0px;
-	float: left;
-	background-color: #FFFF00;
-	min-width: 17px;
-/*viene allargato a 25px da 4px padding-left + 4px padding-right*/
-	min-height: 25px;
-	float: left;
-	display: block;
-	text-decoration: none;
-	line-height: 25px;
-/*permette di centrare il testo verticalmente*/
-	margin: 1px;
-	margin-top: 0px;
-/*padding-left: 6px;
-padding-right: 3px;
-padding-top: 3px;
-padding-bottom: 3px;*/
-	border: 1px solid #DEDEDE;
-	-moz-border-radius: 4px;
-/*CSS3 spicing*/
-	-webkit-border-radius: 4px;
-/*CSS3 spicing*/
-}
-DIV.pagination SPAN.gap
-{
-	height: 25px;
-	padding-left: 0px;
-	float: left;
-	background-color: #FFFF00;
-	min-width: 17px;
-/*viene allargato a 25px da 4px padding-left + 4px padding-right*/
-	min-height: 25px;
-	float: left;
-	display: block;
-	text-decoration: none;
-	line-height: 25px;
-/*permette di centrare il testo verticalmente*/
-	margin: 1px;
-	margin-top: 0px;
-/*padding-left: 6px;
-padding-right: 3px;
-padding-top: 3px;
-padding-bottom: 3px;*/
-	border: 1px solid #DEDEDE;
-	-moz-border-radius: 4px;
-/*CSS3 spicing*/
-	-webkit-border-radius: 4px;
-/*CSS3 spicing*/
-}
-/*PAGINATION end */
-
-
-/* VIEW_LIST start*/
-UL.view_list
-{
-	list-style-type: none;
-/*important for the navigation bar
-background: red; /*for debug
-border-bottom: 2px solid yellow;/*for debug*/
-}
-UL.view_list > LI > A.sx
-{
-	float: left;
-	background: #F5F5F5;
-/**/
-	width: 270px;
-	border: none;
-}
-UL.view_list > LI > A.dx
-{
-	float: left;
-	background: #F5F5F5;
-/**/
-	width: 10px;
-	border: none;
-}
-UL.view_list > LI > A:hover, UL.view_list > LI > A:focus
-{
-	background: #DEDEDE;
-/**/
-}
-UL.view_list > LI.alternate > A
-{
-	background: #F8F8F8;
-/*#6FA4FE*/
-	border: none;
-}
-UL.view_list > LI.alternate > A:hover, UL.view_list > LI.alternate > A:focus
-{
-	background: #DEDEDE;
-/**/
-	border: none;
-}
-/*VIEW_LIST end */
-
-
-/* SEARCH INPUT start*/
-INPUT.search_input
-{
-/*min-width: 22px;*/
-	width: 150px;
-	min-height: 23px;
-	float: left;
-	display: block;
-	margin-top: 0px;
-	margin-right: 0px;
-	padding-right: 0px;
-/*padding: 0px;
-text-shadow: 1px 1px 1px #000;*/
-	border: 1px solid #DEDEDE;
-	-moz-border-radius: 4px 0px 0px 4px;
-/*CSS3 spicing topLeft topRight BottomRight bottomLeft*/
-	-webkit-border-radius: 4px 0px 0px 4px;
-/*CSS3 spicing topLeft topRight BottomRight bottomLeft*/
-}
-A.ico_search, INPUT.ico_search
-{
-	float: left;
-	width: 27px;
-	padding-left: 0px;
-	margin-left: 0px;
-	background: url("my_style_images/search.png") no-repeat 1px;
-	border-left: none;
-	-moz-border-radius: 0px 4px 4px 0px;
-/*CSS3 spicing topLeft topRight BottomRight bottomLeft*/
-	-webkit-border-radius: 0px 4px 4px 0px;
-/*CSS3 spicing topLeft topRight BottomRight bottomLeft*/
-}
-A.ico_search:hover, A.ico_search:focus
-{
-	background-color: #888;
-	border: 1px solid #444;
-	border-left: none;
-}
-/*SEARCH INPUT end */
-
-
-
-
-/* ! TABS start*/
-UL.css-tabs
-{
-	height: 35px;
-	margin: 0 !important;
-	padding: 0;
-/*border-bottom: 1px solid #666;*/
-	background-color: inherit;
-}
-UL.css-tabs LI
-{
-	height: 35px;
-	float: left;
-	padding: 0;
-	margin: 0;
-	background-color: inherit;
-	list-style-type: none;
-}
-UL.css-tabs A
-{
-/*height: 25px;*/
-	min-width: 22px;
-	max-width: 72px;
-	padding: 5px 1px 1px;
-	margin-right: 2px;
-	position: relative;
-	float: left;
-	top: 1px;
-	text-decoration: none;
-	display: block;
-	background-color: #FFFFFF;
-	color: #777777;
-	outline: 0;
-	border: 1px solid #666;
-/*border-bottom: 0px;*/
-	-moz-border-radius: 0px 4px;
-/*CSS3 spicing*/
-	-webkit-border-radius: 0px 4px;
-/*CSS3 spicing*/
-}
-UL.css-tabs A:hover
-{
-	background-color: transparent;
-	color: #333333;
-}
-UL.css-tabs A.current
-{
-	background-color: transparent;
-/*background-image: url("./my_style_images/arrow.png") no-repeat 10px;*/
-	border: none;
-	color: #FFFFFF;
-	cursor: default;
-}
-.css-panes > DIV
-{
-/*overflow-y: auto;
-height: 400px;
-min-height: 150px;
-padding: 2px;*/
-	display: none;
-	border: 1px solid #333333;
-	border-width: 0 1px 1px;
-	background-color: inherit;
-}
-.css-panes > DIV DIV.header
-{
-	width: auto;
-/*max-height: 50px;*/
-	height: 26px;
-	padding-top: 4px;
-	padding-bottom: 4px;
-	overflow: auto;
-	clear: both;
-}
-.css-panes > DIV DIV.section
-{
-	width: auto;
-	overflow-y: auto;
-/*max-height: 50px;*/
-	max-height: 350px;
-	overflow: auto;
-	clear: both;
-}
-.css-panes > DIV DIV.footer
-{
-	width: auto;
-/*max-height: 50px;*/
-	height: 40px;
-	overflow: auto;
-	clear: both;
-}
-/*TABS end
-IPHONE CHECKBOXES ONLY CSS3 start*/
-.checkbox_on_off
-{
-	display: block;
-	width: 94px;
-	height: 27px;
-	overflow: hidden;
-	border-radius: 3px;
-}
-.checkbox_on_off INPUT[type=checkbox]
-{
-	display: none;
-}
-.checkbox_on_off INPUT[type=checkbox] + LABEL
-{
-	text-indent: -9999px;
-	display: block;
-	width: 150px;
-	height: 27px;
-	line-height: 27px;
-	background: transparent url("/assets/my_style_images/iphone_style_checkboxes/on_off.png") no-repeat -56px 0;
-	-webkit-transition: background-position 0.3s ease-in-out;
-	-moz-transition: background-position 0.3s ease-in-out;
-}
-.checkbox_on_off INPUT[type=checkbox]:checked + LABEL
-{
-	-webkit-transition: background-position 0.3s ease-in-out;
-	-moz-transition: background-position 0.3s ease-in-out;
-	background-position: -3px 0;
-}
-.checkbox_attuale_archivio
-{
-	display: block;
-	width: 94px;
-	height: 27px;
-	overflow: hidden;
-	border-radius: 3px;
-}
-.checkbox_attuale_archivio INPUT[type=checkbox]
-{
-	display: none;
-}
-.checkbox_attuale_archivio INPUT[type=checkbox] + LABEL
-{
-	text-indent: -9999px;
-	display: block;
-	width: 150px;
-	height: 27px;
-	line-height: 27px;
-	background: transparent url("/assets/my_style_images/iphone_style_checkboxes/attuale_archivio.png") no-repeat -56px 0;
-	-webkit-transition: background-position 0.3s ease-in-out;
-	-moz-transition: background-position 0.3s ease-in-out;
-}
-.checkbox_attuale_archivio INPUT[type=checkbox]:checked + LABEL
-{
-	-webkit-transition: background-position 0.3s ease-in-out;
-	-moz-transition: background-position 0.3s ease-in-out;
-	background-position: -3px 0;
-}
-/*IPHONE CHECKBOXES ONLY CSS3 end
-
-
-IPHONE CHECKBOXES start*/
-.css_sized_container .iPhoneCheckContainer
-{
-	position: relative;
-	float: left;
-}
-.iPhoneCheckContainer
-{
-	position: relative;
-	height: 27px;
-	cursor: pointer;
-	overflow: hidden;
-}
-.iPhoneCheckContainer INPUT
-{
-	position: absolute;
-	top: 5px;
-	left: 30px;
-	opacity: 0;
-/*-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);*/
-	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-}
-.iPhoneCheckContainer LABEL
-{
-	white-space: nowrap;
-	font-size: 17px;
-	line-height: 17px;
-	font-weight: bold;
-	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-/*text-transform: uppercase;*/
-	cursor: pointer;
-	display: block;
-	height: 27px;
-	position: absolute;
-	width: auto;
-	top: 0;
-	padding-top: 5px;
-	overflow: hidden;
-}
-.iPhoneCheckContainer, .iPhoneCheckContainer LABEL
-{
-	user-select: none;
-	-moz-user-select: none;
-	-khtml-user-select: none;
-}
-.iPhoneCheckDisabled
-{
-	opacity: 0.5;
-	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-}
-LABEL.iPhoneCheckLabelOn
-{
-	color: #FFFFFF;
-	background: url('my_style_images/iphone-style-checkboxes/on.png') no-repeat;
-	text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
-	left: 0;
-	padding-top: 5px;
-}
-LABEL.iPhoneCheckLabelOn SPAN
-{
-	padding-left: 8px;
-}
-LABEL.iPhoneCheckLabelOff
-{
-	color: #8B8B8B;
-	background: url('my_style_images/iphone-style-checkboxes/off.png') no-repeat right 0;
-	text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.6);
-	text-align: right;
-	right: 0;
-}
-LABEL.iPhoneCheckLabelOff SPAN
-{
-	padding-right: 8px;
-}
-.iPhoneCheckHandle
-{
-	display: block;
-	height: 27px;
-	cursor: pointer;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 0;
-	background: url('my_style_images/iphone-style-checkboxes/slider_left.png') no-repeat;
-	padding-left: 3px;
-}
-.iPhoneCheckHandleRight
-{
-	height: 100%;
-	width: 100%;
-	padding-right: 3px;
-	background: url('my_style_images/iphone-style-checkboxes/slider_right.png') no-repeat right 0;
-}
-.iPhoneCheckHandleCenter
-{
-	height: 100%;
-	width: 100%;
-	background: url('my_style_images/iphone-style-checkboxes/slider_center.png');
-}
-/*IPHONE CHECKBOXES end
-FORM start*/
-.myform
-{
-	background: #333;
-/*padding:15px 20px;*/
-	padding-left: 2px;
-	color: #EEE;
-/*width:400px;*/
-	margin: 0 auto;
-	position: relative;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-}
-.myform A
-{
-	clear: both;
-	/*width: 250px;*/
-}
-.myform LABEL
-{
-	font-size: 11px;
-	margin-bottom: 8px;
-	display: block;
-}
-.myform LABEL INPUT
-{
-	display: block;
-	width: 94%;
-}
-/*typography*/
-.myform H3
-{
-	color: #EEE;
-	margin-top: 0px;
-}
-.myform P
-{
-	font-size: 11px;
-}
-/*input field*/
-.myform INPUT, .myform BUTTON
-{
-	border: 1px solid #444;
-	background-color: #666;
-	padding: 5px;
-	color: #DDD;
-	font-size: 12px;
-/*CSS3 spicing*/
-	text-shadow: 1px 1px 1px #000;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-}
-.myform BUTTON
-{
-	float: left;
-	margin-top: 10px;
-}
-.myform INPUT:focus, .myform BUTTON:focus
-{
-	color: #FFF;
-	background-color: #777;
-}
-.myform BUTTON:focus, .myform BUTTON:hover
-{
-	cursor: pointer;
-}
-.myform INPUT:active, .myform BUTTON:active
-{
-	background-color: #888;
-}
-/*error message*/
-.error
-{
-	z-index: 9999999999;
-	height: 15px;
-	background-color: #FFFE36;
-	font-size: 11px;
-	border: 1px solid #E1E16D;
-	padding: 4px 10px;
-	color: #000;
-	display: none;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius-bottomleft: 0;
-	-moz-border-radius-topleft: 0;
-	-webkit-border-bottom-left-radius: 0;
-	-webkit-border-top-left-radius: 0;
-	-moz-box-shadow: 0 0 6px #ddd;
-	-webkit-box-shadow: 0 0 6px #ddd;
-}
-.error
-{
-	margin: 0 0 2px;
-	padding: 2px 6px;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-}
-.error P
-{
-	margin: 0;
-}
-.error EM
-{
-	border: 10px solid #000000;
-	border-color: #FFFE36 transparent transparent;
-	bottom: -17px;
-	display: block;
-	height: 0;
-	left: 60px;
-	position: absolute;
-	width: 0;
-}
-/*field label*/
-LABEL
-{
-	display: block;
-	font-size: 11px;
-	color: #CCC;
-}
-#terms LABEL
-{
-	float: left;
-}
-#terms INPUT
-{
-	margin: 0 5px;
-}
-/*FORM end*/
+/* REAR_MODE end */
