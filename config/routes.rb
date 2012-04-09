@@ -18,6 +18,7 @@ AbnisCom::Application.routes.draw do
     match "/people_select_related",     :to => "people#select_related" #named route: people_select_related_path
     match "/companies_select_related",  :to => "companies#select_related" #named route: companies_select_related_path
     match "/companies_connect_person",  :to => "companies#connect_person" #named route: companies_connect_person_path
+    match "/companies_connect_person_update",  :to => "companies#connect_person_update" #named route: companies_connect_person_update_path
 
   #  resources :xxxs
   #

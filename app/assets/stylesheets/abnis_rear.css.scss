@@ -378,7 +378,7 @@ FORM.rear_mode_overlay, DIV.rear_mode_overlay
 		}
 		.myform A
 		{
-			clear: both;
+			/*clear: both;*/
 			/*width: 250px;*/
 		}
 		.myform LABEL
@@ -504,7 +504,7 @@ FORM.rear_mode_overlay, DIV.rear_mode_overlay
 		UL.view_list > LI > A.sx
 		{
 			float: left;
-			background: #F5F5F5;
+			background: #777777;
 		/**/
 			width: 270px;
 			border: none;
@@ -541,7 +541,8 @@ FORM.rear_mode_overlay, DIV.rear_mode_overlay
 		{
 		/*min-width: 22px;*/
 			width: 150px;
-			min-height: 23px;
+			/*min-height: 23px;*/
+			height: 24;
 			float: left;
 			display: block;
 			margin-top: 0px;

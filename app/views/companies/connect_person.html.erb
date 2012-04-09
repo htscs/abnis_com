@@ -10,7 +10,7 @@
 
 
 
-        <h3>associa l'azienda alla persona</h3>
+        <h3>associa la persona all'azienda</h3>
 
         <div class="related"> 
 
@@ -42,9 +42,8 @@
     <ul class="view_list">          
       <% @people.each do |person| %>
         <li> <%# mettere alternato un  <li class="alternate"> %>
-                    
-          <%= link_to "#{person.first_name}", select_go_to_person_path(@user_id, :go_to_person => "#{person.id}", :page => @page_id), 
-                      :class => 'sx' %>
+                              
+          <%= link_to "#{person.first_name}", companies_connect_person_update_path(:company_id => @company_id, :person_id => person.id, :selected_related => 'people', :page => @page_id), :class => 'sx' %>
                     
         </li>
       <% end %>

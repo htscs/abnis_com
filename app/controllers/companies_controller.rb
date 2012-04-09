@@ -38,7 +38,7 @@ class CompaniesController < ApplicationController
   # GET /companies/new
   def new
     @company = Company.new
-        @person = Person.new
+        @person = Person.new # ?!?
     @previous_company_id = params[:current_company_id] #se non sono su company->company allora è nil
     @previous_selected_related = params[:current_selected_related]
     @user_id = session[:user_id]
@@ -102,7 +102,24 @@ class CompaniesController < ApplicationController
   def connect_person
     @title = "associa"
     @people = Person.search(params[:trova]).page(params[:page]).per_page(25).order('created_at DESC')
-
+    @company_id = params[:current_company_id]
   end
 
+  def connect_person_update
+    # aggiunge la persona e la mostra
+     current_company_id = params[:company_id]
+     current_person_id = params[:person_id]
+     CompanyPersonEmployment.create(:company_id => current_company_id, :person_id => current_person_id, :summary => "dipendente")
+ #   if @company.people.update_attributes(params[:company])
+ #     #It worked! devo mettere la visualizzazione del flash sul view se voglio vedere il messaggio ^_^
+ #     redirect_to @company, :flash => { :success => "modifiche effettuate!"}
+ #     #redirect_to @company, notice: 'Company was successfully updated.'
+ #   else
+ #     @title = "modifica persona"
+ #     render 'edit'
+ #     #render action: "edit"
+ #   end
+      redirect_to company_path(current_company_id, :selected_related => 'people'), :flash => { :success => "persona aggiunta!"}
+ #    redirect_to @company, :selected_related => 'people', :flash => { :success => "persona aggiunta!"}
+  end
 end
