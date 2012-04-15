@@ -122,4 +122,16 @@ class CompaniesController < ApplicationController
       redirect_to company_path(current_company_id, :selected_related => 'people'), :flash => { :success => "persona aggiunta!"}
  #    redirect_to @company, :selected_related => 'people', :flash => { :success => "persona aggiunta!"}
   end
+  
+  # GET /companies/1/edit
+  def employment_edit
+    @employment = CompanyPersonEmployment.find(params[:employment_id])
+    @title = "modifica impiego"
+    #
+    @previous_company_id = params[:company_id]
+    @company = Company.find(params[:company_id])
+    @previous_selected_related = "people"
+    
+  end
+  
 end

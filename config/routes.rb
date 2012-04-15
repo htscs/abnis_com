@@ -6,7 +6,8 @@ AbnisCom::Application.routes.draw do
     resources :sessions, :only => [:new, :create, :destroy]
     resources :companies
     resources :people
-
+    resources :company_person_employment
+    
     #match "/home",                     :to => "home#show" #named route: home_path
     match "/login",                     :to => "sessions#new" #named route: login_path
     match "/logout",                    :to => "sessions#destroy" #named route: logout_path
@@ -19,6 +20,9 @@ AbnisCom::Application.routes.draw do
     match "/companies_select_related",  :to => "companies#select_related" #named route: companies_select_related_path
     match "/companies_connect_person",  :to => "companies#connect_person" #named route: companies_connect_person_path
     match "/companies_connect_person_update",  :to => "companies#connect_person_update" #named route: companies_connect_person_update_path
+    match "/companies_employment_edit",  :to => "companies#employment_edit" #named route: companies_employment_edit_path
+    match "/company_person_employment",  :to => "companies#employment_edit" #named route: company_person_employment_path (RICHIESTO DA form_for(...) su employment_edit.html.erb)
+    
 
   #  resources :xxxs
   #

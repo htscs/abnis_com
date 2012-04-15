@@ -9,23 +9,32 @@
 	<% end %>
 
 	<% if @ico_new_status == "disabled" %>
-	<%= link_to "", '#', :class => "ico_new_disabled" %>
-	<% elsif @ico_new_status == "enabled" %>
-	
-		<%= link_to "", companies_connect_person_path(:current_company_id => @company.id, :current_selected_related => 'people'), :class => "ico_new" %> 
-
-		<%#= link_to "", new_person_path(:current_company_id => @company.id, :current_selected_related => 'people'), :class => "ico_new" %> 
+		<%= link_to "", '#', :class => "ico_new_disabled" %>
+	<% elsif @ico_new_status == "enabled" %>		
+		<%= link_to "", companies_connect_person_path(:current_company_id => @company.id, :current_selected_related => 'people'), :class => "ico_new" %>
 	<% end %> 
+
+	<%= link_to "_ edit _", '#', :class => "" %>
 
 </div>
 <div class="section">
   <nav>
     <ul class="view_list">          
       <% @people.each do |person| %>
-        <li> <%# mettere alternato un  <li class="alternate"> %>
+        <li> <%# mettere alternato un  <li class="alternate"> %>	
                     
-          <%= link_to "#{person.first_name}", select_go_to_person_path(@user_id, :go_to_person => "#{person.id}", :page => @page_id), 
-                      :class => 'sx' %>
+          <%= link_to "#{person.first_name} #{person.last_name} (#{person.company_person_employments[0].summary})",
+ 											companies_employment_edit_path(@user_id, 
+																										:person_id => "#{person.id}",
+																										:company_id => @company.id,
+																										:employment_id => "#{person.company_person_employments[0].id}",
+																										:page => @page_id), 
+											:class => 'sx' %>
+					<%= link_to "...", 
+											select_go_to_person_path(@user_id, 
+																							:go_to_person => "#{person.id}", 
+																							:page => @page_id),  
+											:class => 'dx' %>
                     
         </li>
       <% end %>

@@ -13,7 +13,6 @@
 		<%# <a href="#" id="searchButton" class="ico_search"> %>
 	<% end %>
 
-
 	
   <%# <a href="#" id="trova" name="trova" class="ico_new" rel="#edit_related"></a> %>
   <% if @ico_new_status == "disabled" %>
@@ -21,9 +20,9 @@
   <% elsif @ico_new_status == "enabled" %>
     <%#= link_to "", user_path(@user_id, :selected_related => 'people',:page => 1, :trova => 'woo'), :class => "ico_new" %>
     <%= link_to "", new_person_path(:current_person_id => nil, :current_selected_related => 'people'), :class => "ico_new" %>  
-
   <% end %>
-    
+
+	<%= link_to "_ edit _", '#', :class => "" %>
 
 </div>
 <div class="section">
