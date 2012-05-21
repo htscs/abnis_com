@@ -51,8 +51,7 @@ FORM.rear_mode_overlay, DIV.rear_mode_overlay
 
 	/* EDIT_MODE start */
 	.edit_mode{
-/*		position: relative;
-*/	
+	/*position: relative;*/	
 		.main
 		{
 			width: auto; /*max-height: 120px;*/
@@ -735,6 +734,7 @@ FORM.rear_mode_overlay, DIV.rear_mode_overlay
 		/*ICONS start*/
 		.ico_home, .ico_login, .ico_logout, .ico_person, .ico_connect, .ico_company, .ico_product, .ico_project, .ico_new, .ico_new_disabled, .ico_favorite, .ico_delete, .ico_edit, .ico_option, .ico_language, .ico_language_it, LI A.ico_language_it P, .ico_language_us, LI A.ico_language_us P, .ico_select, .ico_select_all, .ico_tutorial, .ico_users, .ico_window_same, .ico_window_new
 		{
+			width: 90%;
 			text-indent: 24px;
 		/*sposta il testo e permette di vedere l'icona*/
 			padding-left: 4px;

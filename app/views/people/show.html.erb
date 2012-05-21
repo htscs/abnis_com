@@ -23,6 +23,8 @@
       <%= render "show_related_favorites" %>
     <% elsif @selected_related == 'people' %>
       <%= render "show_related_people" %>    
+	  <% elsif @selected_related == 'companies' %>
+	      <%= render "show_related_companies" %>    
     <% end %>
   </div>
 

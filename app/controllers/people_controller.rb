@@ -23,7 +23,7 @@ class PeopleController < ApplicationController
     if @selected_related == 'people'
       @people = Person.search(params[:trova]).page(params[:page]).per_page(25).order('created_at DESC')
     elsif @selected_related == 'companies'
-      # da fare
+      @companies = @person.companies.search(params[:trova]).page(params[:page]).per_page(25).order('created_at DESC')
     end      
   end
 

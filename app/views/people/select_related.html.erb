@@ -23,7 +23,7 @@
               <%= link_to "persone", person_path(@person_id, :selected_related => 'people'), :class => 'ico_person' %>
             </li>
             <li>
-              <%= link_to "aziende", "#", :class => 'ico_company' %>
+	            <%= link_to "aziende", person_path(@person_id, :selected_related => 'companies'), :class => 'ico_company' %>
             </li>
             <li>
 			  <%= link_to "prodotti", "#", :class => 'ico_product' %>

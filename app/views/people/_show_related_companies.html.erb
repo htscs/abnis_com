@@ -1,0 +1,58 @@
+<div class="header">
+	<%= link_to "", people_select_related_path( :person_id => @person.id,:selected_related => 'company' ), :class => "ico_company" %>  
+
+	<%= form_tag person_path(@person.id), :method => 'get' do %> <%# SEARCH %>
+		<%= hidden_field_tag :selected_related, 'company'  %>
+		<%= hidden_field_tag :page, 1  %>
+		<%= text_field_tag :trova, params[:trova], class: "search_input" %>
+		<%= submit_tag "", :name => nil, class: "ico_search" %> <%# vedi screencast Railcasts 037-simple-search-form %>
+	<% end %>
+
+	<% if @ico_new_status == "disabled" %>
+		<%= link_to "", '#', :class => "ico_new_disabled" %>
+	<% elsif @ico_new_status == "enabled" %>		
+		<%= link_to "", person_connect_person_path(:current_person_id => @person.id, :current_selected_related => 'company'), :class => "ico_new" %>
+	<% end %> 
+
+	<%= link_to "_ edit _", '#', :class => "" %>
+
+</div>
+<div class="section">
+  <nav>
+    <ul class="view_list">          
+      <% @companies.each do |company| %>
+        <li> <%# mettere alternato un  <li class="alternate"> %>	
+                   <%= "#{company.name} (#{company.company_person_employments[0].summary})"%>
+          <%#= link_to "#{company.name} (#{company.company_person_employments[0].summary})",
+ 											companies_employment_edit_path(@user_id, 
+																										:person_id => @person.id,
+																										:company_id => "#{company.id}",
+																										:employment_id => "#{person.company_person_employments[0].id}",
+																										:page => @page_id), 
+											:class => 'sx' %>
+					<%#= link_to "...", 
+											select_go_to_company_path(@user_id, 
+																							:go_to_company => "#{company.id}", 
+																							:page => @page_id),  
+											:class => 'dx' %>
+                    
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+</div>
+<div class="footer">
+	<% if @companies.previous_page %>
+		<%= link_to "<", params.merge(:page => @companies.previous_page) %>
+	<% end%>
+	<a href="#"> Pagina <%= @companies.current_page %> di <%= @companies.total_pages %> </a>
+	<% if @companies.next_page %>
+		<%= link_to ">", params.merge(:page => @companies.next_page) %>
+	<% end %>
+
+  <div class="checkbox_attuale_archivio">
+    <input id="storico" name="1" type="checkbox" value="1" checked="checked"/>
+    <label for="storico">Check-me</label>
+  </div>
+
+</div>
