@@ -52,8 +52,9 @@ FORM.rear_mode_overlay, DIV.rear_mode_overlay
 	}
 
 	/* EDIT_MODE start */
+
 	.edit_mode{
-	/*position: relative;*/	
+		/*position: relative;*/	
 		.main
 		{
 			width: auto; /*max-height: 120px;*/
@@ -363,78 +364,6 @@ FORM.rear_mode_overlay, DIV.rear_mode_overlay
 		/*PAGINATION end */
 
 
-		/*MYFORM start*/
-		.myform
-		{
-			background: #333;
-		/*padding:15px 20px;*/
-			padding-left: 2px;
-			color: #EEE;
-		/*width:400px;*/
-			margin: 0 auto;
-			position: relative;
-			border-radius: 5px;
-			-moz-border-radius: 5px;
-			-webkit-border-radius: 5px;
-		}
-		.myform A
-		{
-			/*clear: both;*/
-			/*width: 250px;*/
-		}
-		.myform LABEL
-		{
-			font-size: 11px;
-			margin-bottom: 8px;
-			display: block;
-		}
-		.myform LABEL INPUT
-		{
-			display: block;
-			width: 94%;
-		}
-		/*typography*/
-		.myform H3
-		{
-			color: #EEE;
-			margin-top: 0px;
-		}
-		.myform P
-		{
-			font-size: 11px;
-		}
-		/*input field*/
-		.myform INPUT, .myform BUTTON
-		{
-			border: 1px solid #444;
-			background-color: #666;
-			padding: 5px;
-			color: #DDD;
-			font-size: 12px;
-		/*CSS3 spicing*/
-			text-shadow: 1px 1px 1px #000;
-			border-radius: 4px;
-			-moz-border-radius: 4px;
-			-webkit-border-radius: 4px;
-		}
-		.myform BUTTON
-		{
-			float: left;
-			margin-top: 10px;
-		}
-		.myform INPUT:focus, .myform BUTTON:focus
-		{
-			color: #FFF;
-			background-color: #777;
-		}
-		.myform BUTTON:focus, .myform BUTTON:hover
-		{
-			cursor: pointer;
-		}
-		.myform INPUT:active, .myform BUTTON:active
-		{
-			background-color: #888;
-		}
 		/*error message*/
 		.error
 		{
@@ -590,15 +519,16 @@ FORM.rear_mode_overlay, DIV.rear_mode_overlay
 			height: 35px;
 			margin: 0 !important;
 			padding: 0;
-		/*border-bottom: 1px solid #666;*/
+			border: none;
 			background-color: inherit;
 		}
 		UL.css-tabs LI
 		{
 			height: 35px;
 			float: left;
-			padding: 0;
 			margin: 0;
+			padding: 0;
+			border: none;
 			background-color: inherit;
 			list-style-type: none;
 		}
@@ -607,44 +537,52 @@ FORM.rear_mode_overlay, DIV.rear_mode_overlay
 		/*height: 25px;*/
 			min-width: 22px;
 			max-width: 72px;
-			padding: 5px 1px 1px;
-			margin-right: 2px;
+			padding: 5px 2px 0px 0px;
+			margin: 2px 2px 0px 0px;
 			position: relative;
 			float: left;
-			top: 1px;
+			top: 2px;
+			left: 5px;
 			text-decoration: none;
 			display: block;
 			background-color: #FFFFFF;
 			color: #777777;
 			outline: 0;
-			border: 1px solid #666;
-		/*border-bottom: 0px;*/
-			border-radius: 0px 4px;
-			-moz-border-radius: 0px 4px;
-			-webkit-border-radius: 0px 4px;
+			border: 1.5px solid #FFFFFF;
+			/*border-bottom: 1.5px solid red;*/
+			border-radius: 6px 6px 0px 0px;
+			-moz-border-radius: 6px 6px 0px 0px;
+			-webkit-border-radius: 6px 6px 0px 0px;
 		}
 		UL.css-tabs A:hover
 		{
 			background-color: transparent;
+			border: 1.5px solid #FFFFFF;
+			border-bottom: 1.5px solid #FFFFFF;
 			color: #333333;
 		}
 		UL.css-tabs A.current
 		{
 			background-color: transparent;
 		/*background-image: url("./my_style_images/arrow.png") no-repeat 10px;*/
-			border: none;
-			color: #FFFFFF;
+			/*border: none;*/
+			border-bottom: 1.5px solid #333333;
+			color: #EEEEEE;
 			cursor: default;
 		}
 		.css-panes > DIV
 		{
 		/*overflow-y: auto;
 		height: 400px;
-		min-height: 150px;
-		padding: 2px;*/
+		min-height: 150px;*/
+			padding: 2px;
 			display: none;
-			border: 1px solid #333333;
-			border-width: 0 1px 1px;
+			border: 1.5px solid #FFFFFF;
+			/*border-width: 0 1px 1px;/*Toglie il bordo superiore*/
+			border-radius: 4px 4px 4px 4px;
+			/*CSS3 spicing topLeft topRight BottomRight bottomLeft*/
+			-moz-border-radius: 4px 4px 4px 4px;
+			-webkit-border-radius: 4px 4px 4px 4px;
 			background-color: inherit;
 		}
 		.css-panes > DIV DIV.header
@@ -675,6 +613,67 @@ FORM.rear_mode_overlay, DIV.rear_mode_overlay
 			clear: both;
 		}
 		/*TABS end*/
+
+
+		.css-panes A
+		{
+			/*clear: both;*/
+			/*width: 250px;*/
+		}
+		.css-panes LABEL
+		{
+			font-size: 11px;
+			margin-bottom: 8px;
+			display: block;
+		}
+		.css-panes LABEL INPUT
+		{
+			display: block;
+			width: 94%;
+		}
+		/*typography*/
+		.css-panes H3
+		{
+			color: #EEE;
+			margin-top: 0px;
+		}
+		.css-panes P
+		{
+			font-size: 11px;
+		}
+		/*input field*/
+		.css-panes INPUT, .myform BUTTON
+		{
+			border: 1px solid #444;
+			background-color: #666;
+			padding: 5px;
+			color: #DDD;
+			font-size: 12px;
+		/*CSS3 spicing*/
+			text-shadow: 1px 1px 1px #000;
+			border-radius: 4px;
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+		}
+		.css-panes BUTTON
+		{
+			float: left;
+			margin-top: 10px;
+		}
+		.css-panes INPUT:focus, .css-panes BUTTON:focus
+		{
+			color: #FFF;
+			background-color: #777;
+		}
+		.css-panes BUTTON:focus, .css-panes BUTTON:hover
+		{
+			cursor: pointer;
+		}
+		.css-panes INPUT:active, .css-panes BUTTON:active
+		{
+			background-color: #888;
+		}
+
 
 		/*IPHONE CHECKBOXES ONLY CSS3 start*/
 		.checkbox_on_off
