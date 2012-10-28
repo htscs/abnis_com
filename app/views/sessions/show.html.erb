@@ -12,37 +12,34 @@
 
     <div class="section">
       <p>Benvenuto in <b>Abnis</b></p>
-      <p> Clicca in alto su "entra" per andare sulla pagina di login.
+      <p>Per effettuare il login clicca sulll'icona in alto a sinistra.
       <p>
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <% end %>
       </p>
-      <p>Copyright 2011</p>
-      <p>Copyright 2011</p>
-      <p>Copyright 2011</p>
-      <p>Copyright 2011</p>
-      <p>Copyright 2011</p>
     </div>
 
   </div>
  
  <div class="related">
+    
     <div class="header">
       <a href="#" class="ico_language">lingua</a>
       <input id="search_input" name="serach_input" class="search_input" type="text" value="search"></input>
-      <a href="#" id="searchButton" class="ico_search"></a>
+      <a href="#" id="search_button" class="ico_search"></a>
     </div>
+
     <div class="section">
     <nav>
       <ul class="view_list">
         <li>
-          <a href="#" class="ico_language_it">
+          <a href="#" class="sx ico_language_it">
             <p>Italiano</p>
           </a>  
         </li>
         <li class="alternate">
-          <a href="#" class="ico_language_us">
+          <a href="#" class="sx ico_language_us">
             <p>English</p>
           </a>  
         </li>

@@ -1,9 +1,8 @@
 <div class="header">
-  <!-- <a href="#" class="ico_favorite" loadOverlay="false" rel="#select_related">preferiti</a> -->
   <%= link_to "", users_select_related_path( :selected_related => 'favorites' ), :class => "ico_favorite" %>
   <input id="search_input" name="serach_input" class="search_input" type="text" value="search"></input>
-  <a href="#" id="searchButton" class="ico_search">
-  <a href="#" class="ico_new" loadOverlay="false" rel="#edit_related"></a>
+  <a href="#" id="search_button" class="ico_search">
+  <a href="#" id="new_button" class="ico_new"></a>
 </div>
 
 <div class="section">

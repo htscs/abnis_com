@@ -44,7 +44,7 @@
 	<% if @people.previous_page %>
 		<%= link_to "<", params.merge(:page => @people.previous_page) %>
 	<% end%>
-	<a href="#"> Pagina <%= @people.current_page %> di <%= @people.total_pages %> </a>
+	<a href="#"> <%= @people.current_page %> di <%= @people.total_pages %> </a>
 	<% if @people.next_page %>
 		<%= link_to ">", params.merge(:page => @people.next_page) %>
 	<% end%>

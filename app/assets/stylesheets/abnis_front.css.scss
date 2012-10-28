@@ -18,6 +18,7 @@ FORM.front_mode, DIV.front_mode
 	margin-top: 20px;
 	padding: 2px;
 	border: 1px solid #EEEEEE;
+	border-radius: 5px;
 	-moz-border-radius: 5px; /*CSS3 spicing*/
 	-webkit-border-radius: 5px; /*CSS3 spicing*/
 
@@ -62,6 +63,7 @@ FORM.front_mode, DIV.front_mode
 		margin-bottom: 2px;
 		padding: 2px;
 		border: 1px solid #EEEEEE;
+		border-radius: 5px;
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;
 	}
@@ -177,6 +179,7 @@ FORM.front_mode, DIV.front_mode
 		padding-top: 3px;
 		padding-bottom: 3px;*/
 		border: 1px solid #DEDEDE;
+		border-radius: 4px;
 		-moz-border-radius: 4px;
 		-webkit-border-radius: 4px;
 	}
@@ -253,10 +256,10 @@ FORM.front_mode, DIV.front_mode
 	/*padding: 0px;
 	text-shadow: 1px 1px 1px #000;*/
 		border: 1px solid #DEDEDE;
+		border-radius: 4px 0px 0px 4px;
+		/*CSS3 spicing topLeft topRight BottomRight bottomLeft*/
 		-moz-border-radius: 4px 0px 0px 4px;
-	/*CSS3 spicing topLeft topRight BottomRight bottomLeft*/
 		-webkit-border-radius: 4px 0px 0px 4px;
-	/*CSS3 spicing topLeft topRight BottomRight bottomLeft*/
 	}
 	A.ico_search, INPUT.ico_search
 	{
@@ -266,10 +269,10 @@ FORM.front_mode, DIV.front_mode
 		margin-left: 0px;
 		background: url("my_style_images/search.png") no-repeat 1px;
 		border-left: none;
+		border-radius: 0px 4px 4px 0px;
+		/*CSS3 spicing topLeft topRight BottomRight bottomLeft*/
 		-moz-border-radius: 0px 4px 4px 0px;
-	/*CSS3 spicing topLeft topRight BottomRight bottomLeft*/
 		-webkit-border-radius: 0px 4px 4px 0px;
-	/*CSS3 spicing topLeft topRight BottomRight bottomLeft*/
 	}
 	A.ico_search:hover, A.ico_search:focus
 	{
@@ -312,10 +315,9 @@ FORM.front_mode, DIV.front_mode
 	padding-top: 3px;
 	padding-bottom: 3px;*/
 		border: 1px solid #DEDEDE;
+		border-radius: 4px;
 		-moz-border-radius: 4px;
-	/*CSS3 spicing*/
 		-webkit-border-radius: 4px;
-	/*CSS3 spicing*/
 	}
 	DIV.pagination EM
 	{
@@ -324,13 +326,13 @@ FORM.front_mode, DIV.front_mode
 		float: left;
 		background-color: #FFFF00;
 		min-width: 17px;
-	/*viene allargato a 25px da 4px padding-left + 4px padding-right*/
+		/*viene allargato a 25px da 4px padding-left + 4px padding-right*/
 		min-height: 25px;
 		float: left;
 		display: block;
 		text-decoration: none;
 		line-height: 25px;
-	/*permette di centrare il testo verticalmente*/
+		/*permette di centrare il testo verticalmente*/
 		margin: 1px;
 		margin-top: 0px;
 	/*padding-left: 6px;
@@ -338,10 +340,9 @@ FORM.front_mode, DIV.front_mode
 	padding-top: 3px;
 	padding-bottom: 3px;*/
 		border: 1px solid #DEDEDE;
+		border-radius: 4px;
 		-moz-border-radius: 4px;
-	/*CSS3 spicing*/
 		-webkit-border-radius: 4px;
-	/*CSS3 spicing*/
 	}
 	DIV.pagination SPAN.gap
 	{
@@ -364,10 +365,9 @@ FORM.front_mode, DIV.front_mode
 	padding-top: 3px;
 	padding-bottom: 3px;*/
 		border: 1px solid #DEDEDE;
+		border-radius: 4px;
 		-moz-border-radius: 4px;
-	/*CSS3 spicing*/
 		-webkit-border-radius: 4px;
-	/*CSS3 spicing*/
 	}
 	/*PAGINATION end*/
 
@@ -437,9 +437,9 @@ FORM.front_mode, DIV.front_mode
 	UL.view_list
 	{
 		list-style-type: none;
-	/*important for the navigation bar
-	background: red; /*for debug
-	border-bottom: 2px solid yellow;/*for debug*/
+	/*important for the navigation bar*/
+	/* background: red; /*for debug*/
+	/* border-bottom: 2px solid yellow;/*for debug*/
 	}
 	UL.view_list > LI > A.sx
 	{
@@ -525,7 +525,6 @@ FORM.front_mode, DIV.front_mode
 	.ico_new_disabled
 	{
 		background-image: url("my_style_images/icons/new_disabled.png");
-
 	}
 	.ico_favorite
 	{
